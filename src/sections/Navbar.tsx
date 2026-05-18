@@ -4,7 +4,7 @@ import { Phone, Search, ChevronDown, Menu, X } from 'lucide-react';
 const navLinks = [
   { label: 'Accueil', href: '#', hasDropdown: true },
   { label: 'À Propos', href: '#about' },
-  { label: 'Pages', href: '#', hasDropdown: true },
+  { label: 'Galerie', href: '#gallery' },
   { label: 'Voitures', href: '#cars', hasDropdown: true },
   { label: 'Contact', href: '#contact' },
 ];
