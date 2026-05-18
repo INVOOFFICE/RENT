@@ -1,4 +1,4 @@
-import { Mail, Phone } from 'lucide-react';
+
 
 const socialLinks = [
   {
@@ -65,32 +65,7 @@ export default function Footer() {
         </div>
 
         {/* Main Grid */}
-        <div className="mb-16">
-          {/* Column 1 - Contact */}
-          <div className="max-w-md mx-auto text-center">
-            <h4 className="font-poppins text-lg font-semibold text-white mb-6">Contact</h4>
-            <p className="text-white/60 text-sm font-inter leading-relaxed mb-4">
-              66 Road Broklyn Golden Street, 600
-              <br />
-              New York, USA
-            </p>
-            <a
-              href="mailto:needhelp@company.com"
-              className="flex items-center gap-2 text-white/60 text-sm font-inter hover:text-remons-primary transition-colors mb-3"
-            >
-              <Mail size={16} />
-              needhelp@company.com
-            </a>
-            <a
-              href="tel:+92666888000"
-              className="flex items-center gap-2 text-white/60 text-sm font-inter hover:text-remons-primary transition-colors"
-            >
-              <Phone size={16} />
-              +92 (666) 888 0000
-            </a>
-          </div>
-
-        </div>
+        <div className="mb-16"></div>
 
         {/* Copyright */}
         <div className="border-t border-white/10 pt-8 text-center">
