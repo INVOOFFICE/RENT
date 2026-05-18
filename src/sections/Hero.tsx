@@ -95,7 +95,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-0 lg:h-full lg:flex lg:items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 lg:pt-[125px]">
         <div ref={titleRef} className="max-w-lg pt-10 lg:pt-0 lg:ml-[12%]">
           <p className="text-white/90 text-sm font-poppins tracking-[0.2em] uppercase mb-4">
             Recherchez Votre Voiture
