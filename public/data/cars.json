@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Mercedes AMG GT",
+    "price": 700,
+    "duration": "Per Day",
+    "seats": 6,
+    "transmission": "Automatic",
+    "doors": 2,
+    "fuel": "Petrol",
+    "image": "/images/car-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "BMW M4 Competition",
+    "price": 700,
+    "duration": "Per Day",
+    "seats": 6,
+    "transmission": "Automatic",
+    "doors": 2,
+    "fuel": "Petrol",
+    "image": "/images/car-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "BMW M2 Coupe",
+    "price": 700,
+    "duration": "Per Day",
+    "seats": 6,
+    "transmission": "Automatic",
+    "doors": 2,
+    "fuel": "Petrol",
+    "image": "/images/car-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "McLaren 570S",
+    "price": 700,
+    "duration": "Per Day",
+    "seats": 2,
+    "transmission": "Automatic",
+    "doors": 2,
+    "fuel": "Petrol",
+    "image": "/images/car-4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "VW Polo GT",
+    "price": 700,
+    "duration": "Per Day",
+    "seats": 6,
+    "transmission": "Automatic",
+    "doors": 4,
+    "fuel": "Petrol",
+    "image": "/images/car-5.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Audi R8 V10",
+    "price": 700,
+    "duration": "Per Day",
+    "seats": 2,
+    "transmission": "Automatic",
+    "doors": 2,
+    "fuel": "Petrol",
+    "image": "/images/car-6.jpg"
+  }
+]

@@ -1,0 +1,60 @@
+name: Update Cars Data
+
+on:
+  push:
+    paths:
+      - 'public/data/cars.json'
+      - 'scripts/sync-cars.mjs'
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason for manual run'
+        required: false
+        default: 'Manual sync from Google Sheets'
+
+jobs:
+  build:
+    name: Build project with latest cars
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate cars.json
+        run: |
+          echo "🧪 Validating cars.json..."
+          node -e "
+            const fs = require('fs');
+            const data = JSON.parse(fs.readFileSync('public/data/cars.json', 'utf8'));
+            if (!Array.isArray(data)) throw new Error('cars.json must be an array');
+            console.log('✅ Valid — ' + data.length + ' cars loaded');
+            data.forEach((c, i) => {
+              if (!c.name || !c.image) throw new Error('Car at index ' + i + ' missing name or image');
+            });
+          "
+
+      - name: Build project
+        run: npm run build
+
+      - name: Upload build artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/deploy-pages@v4
