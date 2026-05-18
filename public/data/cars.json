@@ -30,7 +30,7 @@
     "transmission": "Automatic",
     "doors": 4,
     "fuel": "Diesel",
-    "image": "/images/car-placeholder.jpg"
+    "image": "https://www.peugeot.ma/content/dam/peugeot/morocco/offres-du-moment/PEUGEOT_208_hybrid-1920-1080.jpg"
   },
   {
     "id": 4,
