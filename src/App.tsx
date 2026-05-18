@@ -6,7 +6,7 @@ import CarRentals from './sections/CarRentals';
 import Gallery from './sections/Gallery';
 
 import Features from './sections/Features';
-import Partners from './sections/Partners';
+
 import FAQ from './sections/FAQ';
 import Footer from './sections/Footer';
 
@@ -21,7 +21,6 @@ function App() {
       <Gallery />
 
       <Features />
-      <Partners />
       <FAQ />
       <Footer />
     </div>
