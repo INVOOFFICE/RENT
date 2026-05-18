@@ -1,68 +1,112 @@
 [
   {
     "id": 1,
-    "name": "Mercedes AMG GT",
-    "price": 700,
-    "duration": "Per Day",
-    "seats": 6,
-    "transmission": "Automatic",
-    "doors": 2,
-    "fuel": "Petrol",
-    "image": "/images/car-1.jpg"
+    "name": "Dacia Logan",
+    "price": 350,
+    "duration": "Day",
+    "seats": 5,
+    "transmission": "Manual",
+    "doors": 4,
+    "fuel": "Diesel",
+    "image": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg"
   },
   {
     "id": 2,
-    "name": "BMW M4 Competition",
-    "price": 700,
-    "duration": "Per Day",
-    "seats": 6,
-    "transmission": "Automatic",
-    "doors": 2,
-    "fuel": "Petrol",
-    "image": "/images/car-2.jpg"
-  },
-  {
-    "id": 3,
-    "name": "BMW M2 Coupe",
-    "price": 700,
-    "duration": "Per Day",
-    "seats": 6,
-    "transmission": "Automatic",
-    "doors": 2,
-    "fuel": "Petrol",
-    "image": "/images/car-3.jpg"
-  },
-  {
-    "id": 4,
-    "name": "McLaren 570S",
-    "price": 700,
-    "duration": "Per Day",
-    "seats": 2,
-    "transmission": "Automatic",
-    "doors": 2,
-    "fuel": "Petrol",
-    "image": "/images/car-4.jpg"
-  },
-  {
-    "id": 5,
-    "name": "VW Polo GT",
-    "price": 700,
-    "duration": "Per Day",
-    "seats": 6,
+    "name": "Renault Clio 5",
+    "price": 450,
+    "duration": "Day",
+    "seats": 5,
     "transmission": "Automatic",
     "doors": 4,
     "fuel": "Petrol",
-    "image": "/images/car-5.jpg"
+    "image": "https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "Peugeot 208",
+    "price": 500,
+    "duration": "Day",
+    "seats": 5,
+    "transmission": "Automatic",
+    "doors": 4,
+    "fuel": "Petrol",
+    "image": "https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg"
+  },
+  {
+    "id": 4,
+    "name": "Hyundai Tucson",
+    "price": 800,
+    "duration": "Day",
+    "seats": 5,
+    "transmission": "Automatic",
+    "doors": 4,
+    "fuel": "Diesel",
+    "image": "https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg"
+  },
+  {
+    "id": 5,
+    "name": "Range Rover Sport",
+    "price": 2200,
+    "duration": "Day",
+    "seats": 5,
+    "transmission": "Automatic",
+    "doors": 4,
+    "fuel": "Petrol",
+    "image": "https://images.pexels.com/photos/2127039/pexels-photo-2127039.jpeg"
   },
   {
     "id": 6,
-    "name": "Audi R8 V10",
-    "price": 700,
-    "duration": "Per Day",
-    "seats": 2,
+    "name": "Mercedes Classe C",
+    "price": 1400,
+    "duration": "Day",
+    "seats": 5,
     "transmission": "Automatic",
+    "doors": 4,
+    "fuel": "Diesel",
+    "image": "https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg"
+  },
+  {
+    "id": 7,
+    "name": "BMW S?rie 3",
+    "price": 1500,
+    "duration": "Day",
+    "seats": 5,
+    "transmission": "Automatic",
+    "doors": 4,
+    "fuel": "Petrol",
+    "image": "https://images.pexels.com/photos/100650/pexels-photo-100650.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Volkswagen Golf 8",
+    "price": 650,
+    "duration": "Day",
+    "seats": 5,
+    "transmission": "Automatic",
+    "doors": 4,
+    "fuel": "Diesel",
+    "image": "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Fiat 500",
+    "price": 400,
+    "duration": "Day",
+    "seats": 4,
+    "transmission": "Manual",
     "doors": 2,
     "fuel": "Petrol",
-    "image": "/images/car-6.jpg"
+    "image": "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Toyota Prado",
+    "price": 1800,
+    "duration": "Day",
+    "seats": 7,
+    "transmission": "Automatic",
+    "doors": 4,
+    "fuel": "Diesel",
+    "image": "https://images.pexels.com/photos/248747/pexels-photo-248747.jpeg"
   }
 ]
