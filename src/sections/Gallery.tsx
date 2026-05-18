@@ -13,7 +13,7 @@ export default function Gallery() {
   });
 
   return (
-    <section ref={sectionRef} className="bg-remons-light-gray py-[100px]">
+    <section id="gallery" ref={sectionRef} className="bg-remons-light-gray py-[100px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-[2fr_1fr] gap-4">
           {/* Masonry Grid */}
