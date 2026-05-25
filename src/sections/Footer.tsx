@@ -64,7 +64,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/50 text-sm font-inter">
-            &copy; {new Date().getFullYear()} {t('footer.copyright')} — {t('common.address')} — {t('common.phone')} — {t('common.email')}
+            &copy; {new Date().getFullYear()} {t('footer.copyright')} — {t('common.address')} — {t('common.phone')}
             {' — '}
             <button onClick={() => setTermsOpen(true)} className="underline hover:text-white transition-colors">
               {t('footer.terms')}
