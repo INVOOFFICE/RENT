@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Dacia-Logan",
-    "price": 0,
+    "price": 300,
     "duration": "Jour",
     "seats": 5,
     "transmission": "Manuelle",
