@@ -17,15 +17,15 @@ const manifest: Partial<ManifestOptions> = {
   lang: "fr",
   icons: [
     {
-      src: "/RENTCAR/icon.svg",
-      sizes: "512x512",
-      type: "image/svg+xml",
+      src: "/RENTCAR/pwa.png",
+      sizes: "1024x1024",
+      type: "image/png",
       purpose: "any",
     },
     {
-      src: "/RENTCAR/icon.svg",
-      sizes: "512x512",
-      type: "image/svg+xml",
+      src: "/RENTCAR/pwa.png",
+      sizes: "1024x1024",
+      type: "image/png",
       purpose: "maskable",
     },
   ],
