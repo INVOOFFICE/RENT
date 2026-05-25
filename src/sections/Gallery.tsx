@@ -18,10 +18,15 @@ export default function Gallery() {
         <div className="grid lg:grid-cols-[2fr_1fr] gap-4">
           {/* Masonry Grid */}
           <div ref={imagesRef} className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {Array.from({ length: 12 }, (_, i) => (
-              <div key={i} className="gallery-item aspect-[4/3] relative rounded-xl overflow-hidden group">
+            {[
+              'car-1.jpg', 'car-2.jpg', 'car-3.jpg',
+              'car-4.jpg', 'car-5.jpg', 'car-6.jpg',
+              'cta-car.png', 'team-1.jpg', 'team-2.jpg',
+              'team-3.jpg',
+            ].map((file, i) => (
+              <div key={file} className="gallery-item aspect-[4/3] relative rounded-xl overflow-hidden group">
                 <img
-                  src={img(`/images/car-${i + 1}.jpg`)}
+                  src={img(`/images/${file}`)}
                   alt={`Galerie ${i + 1}`}
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
