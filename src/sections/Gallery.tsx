@@ -17,50 +17,18 @@ export default function Gallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-[2fr_1fr] gap-4">
           {/* Masonry Grid */}
-          <div ref={imagesRef} className="grid grid-cols-3 grid-rows-2 gap-4">
-            {/* Large left image */}
-            <div className="gallery-item row-span-2 relative rounded-xl overflow-hidden group">
-              <img
-                src={img('/images/car-1.jpg')}
-                alt="Galerie 1"
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-remons-primary/0 group-hover:bg-remons-primary/20 transition-colors duration-300" />
-            </div>
-
-            {/* Top middle */}
-            <div className="gallery-item relative rounded-xl overflow-hidden group">
-              <img
-                src={img('/images/car-3.jpg')}
-                alt="Galerie 2"
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-remons-primary/0 group-hover:bg-remons-primary/20 transition-colors duration-300" />
-            </div>
-
-            {/* Top right - tall */}
-            <div className="gallery-item row-span-2 relative rounded-xl overflow-hidden group">
-              <img
-                src={img('/images/car-6.jpg')}
-                alt="Galerie 3"
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-remons-primary/0 group-hover:bg-remons-primary/20 transition-colors duration-300" />
-            </div>
-
-            {/* Bottom middle */}
-            <div className="gallery-item relative rounded-xl overflow-hidden group">
-              <img
-                src={img('/images/car-4.jpg')}
-                alt="Galerie 4"
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-remons-primary/0 group-hover:bg-remons-primary/20 transition-colors duration-300" />
-            </div>
+          <div ref={imagesRef} className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+            {Array.from({ length: 12 }, (_, i) => (
+              <div key={i} className="gallery-item aspect-[4/3] relative rounded-xl overflow-hidden group">
+                <img
+                  src={img(`/images/car-${i + 1}.jpg`)}
+                  alt={`Galerie ${i + 1}`}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-remons-primary/0 group-hover:bg-remons-primary/20 transition-colors duration-300" />
+              </div>
+            ))}
           </div>
 
           {/* Info Panel */}
