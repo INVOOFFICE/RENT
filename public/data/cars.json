@@ -35,7 +35,7 @@
   {
     "id": 4,
     "name": "Peugeot-208",
-    "price": 0,
+    "price": 200,
     "duration": "Jour",
     "seats": 5,
     "transmission": "Manuelle",
