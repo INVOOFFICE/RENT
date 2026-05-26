@@ -5,8 +5,6 @@ import About from './sections/About';
 import CarRentals from './sections/CarRentals';
 import Gallery from './sections/Gallery';
 
-import Features from './sections/Features';
-
 import FAQ from './sections/FAQ';
 import Footer from './sections/Footer';
 import PwaInstallBanner from './components/PwaInstallBanner';
@@ -22,7 +20,6 @@ function App() {
       <CarRentals />
       <Gallery />
 
-      <Features />
       <FAQ />
       <Footer />
       <PwaInstallBanner />

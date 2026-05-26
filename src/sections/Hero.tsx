@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { gsap } from 'gsap';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Headphones, MousePointerClick, ShieldCheck } from 'lucide-react';
 import { img } from '@/lib/utils';
 import { DatePicker } from '@/components/DatePicker';
 
 const PHONE = '212661341407';
+const featureKeys = ['express', 'insurance', 'support'] as const;
 
 export default function Hero() {
   const { t } = useTranslation();
@@ -111,6 +112,30 @@ export default function Hero() {
           </p>
           <h1 className="font-poppins text-4xl sm:text-5xl lg:text-[52px] font-bold text-white leading-[1.2]"
             dangerouslySetInnerHTML={{ __html: t('hero.title') }} />
+        </div>
+
+        <div className="mt-8 grid gap-3 sm:grid-cols-3 lg:ml-[12%] lg:max-w-[680px]">
+          {featureKeys.map((key, i) => {
+            const icons = [MousePointerClick, ShieldCheck, Headphones];
+            const Icon = icons[i];
+
+            return (
+              <div
+                key={key}
+                className="group rounded-2xl border border-white/20 bg-white/[0.13] p-4 text-white shadow-[0_18px_45px_rgba(15,28,46,0.22)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:bg-white/[0.2]"
+              >
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-white text-remons-primary shadow-lg shadow-slate-950/10">
+                  <Icon size={22} />
+                </div>
+                <h4 className="font-poppins text-sm font-semibold leading-snug">
+                  {t(`features.${key}.title`)}
+                </h4>
+                <p className="mt-2 font-inter text-xs leading-relaxed text-white/78">
+                  {t(`features.${key}.desc`)}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
 
