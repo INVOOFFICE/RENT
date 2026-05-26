@@ -18,19 +18,28 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('');
   const [hidden, setHidden] = useState(false);
   const lastScrollY = useRef(0);
+  const initial = useRef(true);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
 
+      if (initial.current) {
+        lastScrollY.current = currentY;
+        initial.current = false;
+        return;
+      }
+
       if (currentY > lastScrollY.current && currentY > 80) {
         setHidden(true);
-      } else {
+      } else if (currentY < lastScrollY.current) {
         setHidden(false);
       }
 
       lastScrollY.current = currentY;
+    };
 
+    const handleScrollSection = () => {
       const sections = navKeys.map(l => l.href.replace('#', ''));
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
@@ -41,9 +50,15 @@ export default function Navbar() {
       }
       setActiveSection('');
     };
+
     handleScroll();
+    handleScrollSection();
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScrollSection, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', handleScroll, { passive: true } as EventListenerOptions);
+      window.removeEventListener('scroll', handleScrollSection, { passive: true } as EventListenerOptions);
+    };
   }, []);
 
   return (
