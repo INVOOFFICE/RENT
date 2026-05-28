@@ -122,17 +122,6 @@
   },
   {
     "id": 12,
-    "name": "Peugeot 208",
-    "price": 420,
-    "duration": "Per Day",
-    "seats": 5,
-    "transmission": "Automatic",
-    "doors": 5,
-    "fuel": "Petrol",
-    "image": "/images/car-placeholder.jpg"
-  },
-  {
-    "id": 13,
     "name": "Dacia Duster",
     "price": 600,
     "duration": "Per Day",
@@ -143,7 +132,7 @@
     "image": "/images/car-placeholder.jpg"
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Citro?n C3 Aircross",
     "price": 650,
     "duration": "Per Day",
@@ -154,7 +143,7 @@
     "image": "/images/car-placeholder.jpg"
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "Dacia Jogger 7 Places",
     "price": 750,
     "duration": "Per Day",
@@ -165,7 +154,7 @@
     "image": "/images/car-placeholder.jpg"
   },
   {
-    "id": 16,
+    "id": 15,
     "name": "Peugeot 3008",
     "price": 900,
     "duration": "Per Day",
