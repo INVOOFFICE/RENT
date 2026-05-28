@@ -76,6 +76,18 @@ function getBracket(category: string, days: number): PriceBracket | undefined {
   return brackets.find(b => days >= b.minDays && days <= b.maxDays);
 }
 
+function getStartingPrice(category: string, season: 'normal' | 'haute'): number {
+  const brackets = TARIFFS[category];
+  if (!brackets) return 0;
+  const bracket = brackets[0];
+  return season === 'haute' ? bracket.haute : bracket.normal;
+}
+
+function getCurrentSeason(): 'normal' | 'haute' {
+  const today = new Date().toISOString().split('T')[0];
+  return getSeason(today);
+}
+
 const TRANSPORT_PRICES: Record<string, number> = {
   'Marrakech ville': 0,
   'Aéroport Marrakech': 0,
@@ -389,6 +401,7 @@ export default function CarRentals() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
+  const currentSeason = getCurrentSeason();
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}data/cars.json`)
@@ -480,9 +493,14 @@ export default function CarRentals() {
 
                   <div className="flex items-baseline gap-1 mb-4">
                     <span className="font-poppins text-xl font-bold text-remons-primary">
-                      {car.price} EUR
+                      {getStartingPrice(car.category, currentSeason)} EUR
                     </span>
                     <span className="text-remons-gray text-sm font-inter">/ {car.duration}</span>
+                    {currentSeason === 'haute' && (
+                      <span className="text-[10px] font-inter font-semibold text-red-500 bg-red-50 px-1.5 py-0.5 rounded-full">
+                        Haute Saison
+                      </span>
+                    )}
                   </div>
 
                   <div className="border-t border-remons-border mb-4" />
