@@ -9,7 +9,7 @@ import type { ManifestOptions } from 'vite-plugin-pwa'
 const manifest: Partial<ManifestOptions> = {
   name: "Yacout Tours - Location de voitures",
   short_name: "Yacout Tours",
-  description: "La meilleure sélection de voitures à des prix imbattables à Marrakech",
+  description: "Yacout Tours Location Voiture Marrakech Aeroport l'agence de location de voitures partout au Maroc aux meilleurs conditions.",
   start_url: "/RENTCAR/",
   display: "standalone",
   background_color: "#ffffff",

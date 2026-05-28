@@ -10,7 +10,16 @@ const featureKeys = ['express', 'insurance', 'support'] as const;
 
 export default function Hero() {
   const { t } = useTranslation();
-  const locations = [t('hero.agency'), t('hero.airport')];
+  const locations = [
+    'Marrakech ville', 'Aéroport Marrakech',
+    'Casablanca ville', 'Aéroport Casablanca',
+    'Rabat ville', 'Aéroport Rabat',
+    'Agadir ville', 'Aéroport Agadir',
+    'Fès ville', 'Aéroport Fès',
+    'Ouarzazate ville', 'Aéroport Ouarzazate',
+    'Essaouira ville', 'Aéroport Essaouira',
+    'Tanger ville', 'Aéroport Tanger',
+  ];
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
@@ -148,7 +157,7 @@ export default function Hero() {
           {/* Lieu de prise en charge */}
           <div>
             <label className="block text-white text-[13px] font-inter font-medium mb-2">
-              {t('hero.pickupLabel')}
+                    Lieu de prise en charge / Livraison
             </label>
             <div className="relative">
               <select
