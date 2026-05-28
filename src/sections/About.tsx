@@ -1,24 +1,10 @@
-import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import { MousePointerClick, MapPin, ChevronDown } from 'lucide-react';
+import { MousePointerClick, MapPin } from 'lucide-react';
 import { img } from '@/lib/utils';
-import { DatePicker } from '@/components/DatePicker';
-
-const PHONE = '212661341407';
 
 export default function About() {
   const { t } = useTranslation();
-  const locations = [
-    'Marrakech ville', 'Aéroport Marrakech',
-    'Casablanca ville', 'Aéroport Casablanca',
-    'Rabat ville', 'Aéroport Rabat',
-    'Agadir ville', 'Aéroport Agadir',
-    'Fès ville', 'Aéroport Fès',
-    'Ouarzazate ville', 'Aéroport Ouarzazate',
-    'Essaouira ville', 'Aéroport Essaouira',
-    'Tanger ville', 'Aéroport Tanger',
-  ];
 
   const features = [
     {
@@ -30,30 +16,7 @@ export default function About() {
       titleKey: 'locations',
     },
   ];
-  const [fromDate, setFromDate] = useState('');
-  const [toDate, setToDate] = useState('');
-  const [carNames, setCarNames] = useState<string[]>([]);
-  const [location, setLocation] = useState(locations[0]);
-  const [vehicleType, setVehicleType] = useState('');
 
-  useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/cars.json`)
-      .then((res) => res.json())
-      .then((data) => setCarNames(data.map((c: { name: string }) => c.name)))
-      .catch(() => {});
-  }, []);
-
-  const handleBooking = () => {
-    const message = [
-      t('about.bookingTitle'),
-      '',
-      t('about.locationField') + location,
-      t('about.vehicleField') + (vehicleType || t('about.notSpecified')),
-      t('about.startField') + (fromDate || t('about.notSpecifiedF')),
-      t('about.endField') + (toDate || t('about.notSpecifiedF')),
-    ].join('\n');
-    window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`, '_blank');
-  };
   const sectionRef = useScrollAnimation<HTMLElement>({ animation: 'fadeInUp' });
   const leftRef = useScrollAnimation<HTMLDivElement>({
     animation: 'fadeInUp',
@@ -142,7 +105,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right - Image + Form */}
+          {/* Right - Image */}
           <div ref={rightRef} className="relative">
             <img
               src={img('/images/4f.jpg')}
@@ -150,7 +113,6 @@ export default function About() {
               loading="lazy"
               className="w-full max-w-[400px] mx-auto object-contain relative z-10"
             />
-
           </div>
         </div>
       </div>
