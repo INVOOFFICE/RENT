@@ -140,6 +140,6 @@
     "transmission": "Automatic",
     "doors": 5,
     "fuel": "Diesel",
-    "image": "/images/car-placeholder.jpg"
+    "image": "https://en.wikipedia.org/wiki/File:Peugeot_e-3008_Automesse_Ludwigsburg_2024_IMG_1537.jpg"
   }
 ]
