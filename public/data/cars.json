@@ -118,7 +118,7 @@
     "transmission": "Manual",
     "doors": 5,
     "fuel": "Diesel",
-    "image": "/images/car-placeholder.jpg"
+    "image": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Dacia_Duster_TCe_130_Extreme_%28III%29_%E2%80%93_f_13102024.jpg"
   },
   {
     "id": 12,
