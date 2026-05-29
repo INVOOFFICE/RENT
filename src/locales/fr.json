@@ -12,7 +12,7 @@
   "navbar": {
     "home": "Accueil",
     "about": "À Propos",
-    "gallery": "Galerie",
+    "gallery": "Témoignages",
     "cars": "Voitures",
     "contact": "Contact",
     "findCar": "Trouver une Voiture",
@@ -116,7 +116,7 @@
     "doors": "Portes"
   },
   "gallery": {
-    "title": "Location de Voitures<br/>de Confiance<br/>&amp; Fiable",
+    "title": "Témoignages",
     "alt": "Galerie"
   },
   "features": {

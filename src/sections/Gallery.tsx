@@ -20,12 +20,14 @@ export default function Gallery() {
         <div className="grid lg:grid-cols-[2fr_1fr] gap-4">
           {/* Masonry Grid */}
           <div ref={imagesRef} className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-            {Array.from({ length: 12 }, (_, i) => (
+            {Array.from({ length: 7 }, (_, i) => (
               <div key={i} className="gallery-item aspect-[4/3] relative rounded-xl overflow-hidden group">
-                <img
-                  src={img(`/images/car-${i + 1}.jpg`)}
-                  alt={`${t('gallery.alt')} ${i + 1}`}
-                  loading="lazy"
+                <video
+                  src={img(`/tmx/${i + 1}.mp4`)}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                   className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-remons-primary/0 group-hover:bg-remons-primary/20 transition-colors duration-300" />
