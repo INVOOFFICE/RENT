@@ -111,7 +111,7 @@
     "id": 10,
     "name": "Dacia-Sandero",
     "category": "CAT A",
-    "price": 0,
+    "price": 30,
     "duration": "jour",
     "seats": 4,
     "transmission": "Manuelle",
