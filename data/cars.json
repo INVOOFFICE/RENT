@@ -106,5 +106,17 @@
     "doors": 5,
     "fuel": "Diesel",
     "image": "https://www.yacout-tours.com/uploads/cars/6cdf6c57c838d45d322d9939ea7cbada.png"
+  },
+  {
+    "id": 10,
+    "name": "Dacia-Sandero",
+    "category": "CAT A",
+    "price": 0,
+    "duration": "jour",
+    "seats": 4,
+    "transmission": "Manuelle",
+    "doors": 4,
+    "fuel": "Essence",
+    "image": "/images/car-placeholder.jpg"
   }
 ]
