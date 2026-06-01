@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router'
 import './index.css'
 import App from './App.tsx'
 
+const basename = import.meta.env.BASE_URL.replace(/\/+$/, '');
+
 if (import.meta.env.DEV && 'serviceWorker' in navigator) {
   window.addEventListener('load', async () => {
     const registrations = await navigator.serviceWorker.getRegistrations()
@@ -18,7 +20,7 @@ if (import.meta.env.DEV && 'serviceWorker' in navigator) {
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </StrictMode>,
