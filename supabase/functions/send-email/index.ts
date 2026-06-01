@@ -54,29 +54,91 @@ function buildReservationEmail(
 ) {
   const statusLabels: Record<string, string> = {
     new: 'Nouvelle',
-    contacted: 'Contacté',
-    confirmed: 'Confirmée',
-    cancelled: 'Annulée',
-    completed: 'Terminée',
+    contacted: 'Contact\u00e9',
+    confirmed: 'Confirm\u00e9e',
+    cancelled: 'Annul\u00e9e',
+    completed: 'Termin\u00e9e',
+  };
+
+  const statusColors: Record<string, string> = {
+    new: '#DC2626',
+    contacted: '#F59E0B',
+    confirmed: '#16A34A',
+    cancelled: '#6B7280',
+    completed: '#2563EB',
   };
 
   const label = statusLabels[status] || status;
+  const statusColor = statusColors[status] || '#DC2626';
+
+  const rows: string[] = [];
+  const addRow = (label: string, value: string) => {
+    rows.push(`
+      <tr>
+        <td style="padding: 10px 16px; border-bottom: 1px solid #F3F4F6; color: #6B7280; font-size: 13px; white-space: nowrap; vertical-align: top;">${label}</td>
+        <td style="padding: 10px 16px; border-bottom: 1px solid #F3F4F6; color: #111827; font-size: 14px; font-weight: 600; vertical-align: top;">${value}</td>
+      </tr>`);
+  };
+
+  if (data.car_name) addRow('V\u00e9hicule', data.car_name);
+  if (data.start_date) addRow('D\u00e9but', data.start_date);
+  if (data.end_date) addRow('Fin', data.end_date);
+  if (data.location) addRow('Lieu', data.location);
+  if (data.total_eur) addRow('Total', `${data.total_eur.toFixed(2)} \u20ac`);
+
+  const isNew = status === 'new';
+  const greeting = isNew
+    ? `Nouvelle r\u00e9servation de <strong>${data.client_name || 'Client'}</strong>`
+    : `Bonjour <strong>${data.client_name || 'Client'}</strong>, le statut de votre r\u00e9servation a \u00e9t\u00e9 mis \u00e0 jour.`;
 
   const html = `
-    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h2 style="color: #0F766E;">${fromName}</h2>
-      <p>Bonjour <strong>${data.client_name || 'Client'}</strong>,</p>
-      <p>Le statut de votre r\u00e9servation est : <strong>${label}</strong></p>
-      <table style="width: 100%; border-collapse: collapse; margin: 16px 0;">
-        ${data.car_name ? `<tr><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; color: #4B5563;">V\u00e9hicule</td><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; font-weight: 600;">${data.car_name}</td></tr>` : ''}
-        ${data.start_date ? `<tr><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; color: #4B5563;">D\u00e9but</td><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; font-weight: 600;">${data.start_date}</td></tr>` : ''}
-        ${data.end_date ? `<tr><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; color: #4B5563;">Fin</td><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; font-weight: 600;">${data.end_date}</td></tr>` : ''}
-        ${data.location ? `<tr><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; color: #4B5563;">Lieu</td><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; font-weight: 600;">${data.location}</td></tr>` : ''}
-        ${data.total_eur ? `<tr><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; color: #4B5563;">Total</td><td style="padding: 8px; border-bottom: 1px solid #E5E7EB; font-weight: 600;">${data.total_eur} \u20ac</td></tr>` : ''}
+    <div style="background-color: #F9FAFB; padding: 32px 16px; font-family: 'Segoe UI', Arial, Helvetica, sans-serif;">
+      <table align="center" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%; margin: 0 auto; background-color: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+        <tr>
+          <td style="background: linear-gradient(135deg, #DC2626, #EF4444); padding: 28px 32px; text-align: center;">
+            <h1 style="margin: 0; color: #FFFFFF; font-size: 22px; font-weight: 700; letter-spacing: 0.5px;">${fromName}</h1>
+            <p style="margin: 4px 0 0; color: rgba(255,255,255,0.85); font-size: 13px;">Location de v\u00e9hicules \u2022 Marrakech</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 32px 32px 8px;">
+            <p style="margin: 0 0 16px; color: #374151; font-size: 15px; line-height: 1.6;">${greeting}</p>
+            <div style="display: inline-block; background-color: ${statusColor}15; color: ${statusColor}; font-size: 12px; font-weight: 700; padding: 4px 14px; border-radius: 20px; letter-spacing: 0.3px; text-transform: uppercase;">${label}</div>
+          </td>
+        </tr>
+        ${rows.length ? `<tr><td style="padding: 16px 32px 8px;"><table cellpadding="0" cellspacing="0" style="width: 100%; border-collapse: collapse; border-radius: 8px; overflow: hidden; border: 1px solid #E5E7EB;">${rows.join('')}</table></td></tr>` : ''}
+        ${data.message ? `
+        <tr>
+          <td style="padding: 8px 32px;">
+            <div style="background-color: #FFFBEB; border-left: 3px solid #F59E0B; padding: 12px 16px; border-radius: 0 6px 6px 0;">
+              <p style="margin: 0; color: #92400E; font-size: 13px; font-style: italic;">${data.message}</p>
+            </div>
+          </td>
+        </tr>` : ''}
+        <tr>
+          <td style="padding: 16px 32px 32px;">
+            <div style="background-color: #F9FAFB; border-radius: 8px; padding: 16px; border: 1px solid #E5E7EB;">
+              <p style="margin: 0 0 8px; color: #6B7280; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Coordonn\u00e9es client</p>
+              <table cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="padding: 2px 8px 2px 0; color: #374151; font-size: 13px;"><strong>Email :</strong></td>
+                  <td style="padding: 2px 0; color: #DC2626; font-size: 13px;"><a href="mailto:${data.client_email}" style="color: #DC2626; text-decoration: none;">${data.client_email}</a></td>
+                </tr>
+                <tr>
+                  <td style="padding: 2px 8px 2px 0; color: #374151; font-size: 13px;"><strong>T\u00e9l :</strong></td>
+                  <td style="padding: 2px 0; color: #374151; font-size: 13px;">${data.client_phone || 'Non renseign\u00e9'}</td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: #F3F4F6; padding: 20px 32px; text-align: center;">
+            <p style="margin: 0; color: #9CA3AF; font-size: 12px;">${fromName} \u2014 Location de v\u00e9hicules \u00e0 Marrakech</p>
+            <p style="margin: 4px 0 0; color: #9CA3AF; font-size: 11px;">Cet email est automatique, merci de ne pas y r\u00e9pondre.</p>
+          </td>
+        </tr>
       </table>
-      ${data.message ? `<p style="color: #4B5563; font-style: italic;">Message : ${data.message}</p>` : ''}
-      <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 24px 0;" />
-      <p style="color: #9CA3AF; font-size: 12px;">Coordonn\u00e9es client : ${data.client_email} / ${data.client_phone || 'Non renseign\u00e9'}</p>
     </div>
   `;
 
@@ -124,7 +186,29 @@ serve(async (req: Request) => {
 
     if (type === 'test') {
       subject = `Test \u2014 ${fromName}`;
-      html = `<p style="font-family: Arial; color: #0F766E; font-size: 16px;">Email de test \u2014 ${fromName}</p><p style="font-family: Arial; color: #4B5563;">Si vous recevez ce message, la configuration SMTP est correcte.</p>`;
+      html = `
+        <div style="background-color: #F9FAFB; padding: 32px 16px; font-family: 'Segoe UI', Arial, Helvetica, sans-serif;">
+          <table align="center" cellpadding="0" cellspacing="0" style="max-width: 600px; width: 100%; margin: 0 auto; background-color: #FFFFFF; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08);">
+            <tr>
+              <td style="background: linear-gradient(135deg, #DC2626, #EF4444); padding: 28px 32px; text-align: center;">
+                <h1 style="margin: 0; color: #FFFFFF; font-size: 22px; font-weight: 700; letter-spacing: 0.5px;">${fromName}</h1>
+                <p style="margin: 4px 0 0; color: rgba(255,255,255,0.85); font-size: 13px;">Location de v\u00e9hicules \u2022 Marrakech</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 40px 32px; text-align: center;">
+                <div style="width: 56px; height: 56px; background: linear-gradient(135deg, #DC2626, #EF4444); border-radius: 50%; display: inline-block; line-height: 56px; font-size: 28px; margin-bottom: 16px;">\u2709\uFE0F</div>
+                <h2 style="margin: 0 0 8px; color: #111827; font-size: 18px;">Email de test r\u00e9ussi</h2>
+                <p style="margin: 0; color: #6B7280; font-size: 14px; line-height: 1.6;">Si vous recevez ce message, la configuration SMTP de <strong>${fromName}</strong> est correcte et fonctionnelle.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color: #F3F4F6; padding: 20px 32px; text-align: center;">
+                <p style="margin: 0; color: #9CA3AF; font-size: 12px;">${fromName} \u2014 Location de v\u00e9hicules \u00e0 Marrakech</p>
+              </td>
+            </tr>
+          </table>
+        </div>`;
     } else if (type === 'reservation_status') {
       const emailData = buildReservationEmail(status || '', data || {}, fromName, smtpEmail);
       subject = emailData.subject;
