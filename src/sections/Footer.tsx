@@ -5,6 +5,8 @@ import { useState } from 'react';
 import TermsModal from '@/components/TermsModal';
 import PrivacyModal from '@/components/PrivacyModal';
 
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+
 const socialLinks = [
   {
     name: 'Facebook',
@@ -105,7 +107,7 @@ export default function Footer() {
               {t('footer.privacy')}
             </button>
             {' — '}
-            <a href="/admin/login" className="inline-flex items-center gap-1 underline hover:text-foreground transition-colors">
+            <a href={`${base}/admin/login`} className="inline-flex items-center gap-1 underline hover:text-foreground transition-colors">
               <LogIn size={12} /> Connexion
             </a>
           </p>
