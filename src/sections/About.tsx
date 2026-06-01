@@ -37,10 +37,10 @@ export default function About() {
             {/* Subtitle */}
             <div className="flex items-center gap-3 mb-4 animate-item">
               <svg width="32" height="16" viewBox="0 0 32 16" fill="none">
-                <path d="M2 12c0-4 3-7 7-7h5c3 0 5 1.5 6 4" stroke="#08B5F4" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                <circle cx="8" cy="12" r="3" stroke="#08B5F4" strokeWidth="1.5" fill="none"/>
-                <circle cx="24" cy="12" r="3" stroke="#08B5F4" strokeWidth="1.5" fill="none"/>
-                <path d="M6 10l-2-5" stroke="#08B5F4" strokeWidth="1.5" fill="none"/>
+                <path d="M2 12c0-4 3-7 7-7h5c3 0 5 1.5 6 4" stroke="#DC2626" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                <circle cx="8" cy="12" r="3" stroke="#DC2626" strokeWidth="1.5" fill="none"/>
+                <circle cx="24" cy="12" r="3" stroke="#DC2626" strokeWidth="1.5" fill="none"/>
+                <path d="M6 10l-2-5" stroke="#DC2626" strokeWidth="1.5" fill="none"/>
               </svg>
               <span className="text-remons-primary text-[13px] font-inter font-medium uppercase tracking-wider">
                 {t('about.subtitle')}
@@ -73,10 +73,10 @@ export default function About() {
             <div className="animate-item mt-10">
               <div className="flex items-center gap-3 mb-4">
                 <svg width="32" height="16" viewBox="0 0 32 16" fill="none">
-                  <path d="M2 12c0-4 3-7 7-7h5c3 0 5 1.5 6 4" stroke="#08B5F4" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                  <circle cx="8" cy="12" r="3" stroke="#08B5F4" strokeWidth="1.5" fill="none"/>
-                  <circle cx="24" cy="12" r="3" stroke="#08B5F4" strokeWidth="1.5" fill="none"/>
-                  <path d="M6 10l-2-5" stroke="#08B5F4" strokeWidth="1.5" fill="none"/>
+                  <path d="M2 12c0-4 3-7 7-7h5c3 0 5 1.5 6 4" stroke="#DC2626" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                  <circle cx="8" cy="12" r="3" stroke="#DC2626" strokeWidth="1.5" fill="none"/>
+                  <circle cx="24" cy="12" r="3" stroke="#DC2626" strokeWidth="1.5" fill="none"/>
+                  <path d="M6 10l-2-5" stroke="#DC2626" strokeWidth="1.5" fill="none"/>
                 </svg>
                 <span className="text-remons-primary text-[13px] font-inter font-medium uppercase tracking-wider">
                   NOS AVANTAGES
@@ -92,13 +92,22 @@ export default function About() {
               <p className="text-remons-gray text-sm font-inter leading-relaxed mb-4">
                 Livraison gratuite à l'aéroport et centre-ville de Marrakech. Location disponible à Casablanca, Agadir, Rabat, Fès, Tanger et Essaouira.
               </p>
-              <div className="flex items-center gap-3 text-sm">
-                <span className="text-remons-gray font-inter">WhatsApp :</span>
-                <a href="https://wa.me/212661341407" target="_blank" rel="noopener noreferrer" className="text-remons-primary hover:text-remons-primary-dark font-medium transition-colors">
+              <div className="flex flex-wrap items-center gap-3">
+                <span className="text-remons-gray font-inter text-sm">WhatsApp :</span>
+                <a
+                  href="https://wa.me/212630230803"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-remons-primary text-white text-sm font-medium px-4 py-2 rounded-xl hover:bg-remons-primary-dark transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-button"
+                >
                   +212 6 61 34 14 07
                 </a>
-                <span className="text-remons-gray/40">|</span>
-                <a href="https://wa.me/212662357104" target="_blank" rel="noopener noreferrer" className="text-remons-primary hover:text-remons-primary-dark font-medium transition-colors">
+                <a
+                  href="https://wa.me/212662357104"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-remons-primary text-white text-sm font-medium px-4 py-2 rounded-xl hover:bg-remons-primary-dark transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-button"
+                >
                   +212 6 62 35 71 04
                 </a>
               </div>

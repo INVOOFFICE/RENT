@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+﻿import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Phone, Menu, X } from 'lucide-react';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
@@ -74,7 +74,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 shrink-0">
-            <img src={img('/logo.png')} alt="Yacout Tours" className="h-28 w-auto" />
+            <img src={img('/logo.png')} alt="INVOLOCATION" className="h-28 w-auto" />
           </a>
 
           {/* Desktop Nav Links */}

@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
+import { supabase } from '@/lib/supabase';
 
 export type CurrencyCode = 'EUR' | 'USD' | 'MAD';
 
@@ -24,6 +25,10 @@ export function convertPrice(euroAmount: number, to: CurrencyCode): number {
   return Math.round(euroAmount * rates[to] * 100) / 100;
 }
 
+export function convertToEUR(amount: number, from: CurrencyCode): number {
+  return Math.round((amount / rates[from]) * 100) / 100;
+}
+
 interface CurrencyContextType {
   currency: Currency;
   setCurrency: (c: Currency) => void;
@@ -32,9 +37,29 @@ interface CurrencyContextType {
 const CurrencyContext = createContext<CurrencyContextType | null>(null);
 
 export function CurrencyProvider({ children }: { children: ReactNode }) {
-  const [currency, setCurrency] = useState<Currency>(currencies[0]);
+  const [currency, setCurrency] = useState<Currency>(() => {
+    const saved = typeof window !== 'undefined' ? localStorage.getItem('default_currency') : null;
+    return currencies.find(c => c.code === saved) || currencies[0];
+  });
+
+  useEffect(() => {
+    supabase.from('settings').select('value').eq('key', 'default_currency').single().then(({ data }) => {
+      if (data?.value) {
+        const found = currencies.find(c => c.code === data.value);
+        if (found && found.code !== currency.code) {
+          setCurrency(found);
+          localStorage.setItem('default_currency', found.code);
+        }
+      }
+    });
+  }, []);
+
+  const setAndPersist = (c: Currency) => {
+    setCurrency(c);
+    localStorage.setItem('default_currency', c.code);
+  };
   return (
-    <CurrencyContext.Provider value={{ currency, setCurrency }}>
+    <CurrencyContext.Provider value={{ currency, setCurrency: setAndPersist }}>
       {children}
     </CurrencyContext.Provider>
   );

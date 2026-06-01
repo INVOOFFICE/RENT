@@ -1,4 +1,4 @@
-import path from "path"
+﻿import path from "path"
 import react from "@vitejs/plugin-react"
 import { defineConfig } from "vite"
 import { inspectAttr } from 'kimi-plugin-inspect-react'
@@ -7,13 +7,13 @@ import { VitePWA } from 'vite-plugin-pwa'
 import type { ManifestOptions } from 'vite-plugin-pwa'
 
 const manifest: Partial<ManifestOptions> = {
-  name: "Yacout Tours - Location de voitures",
-  short_name: "Yacout Tours",
-  description: "Yacout Tours Location Voiture Marrakech Aeroport l'agence de location de voitures partout au Maroc aux meilleurs conditions.",
+  name: "INVOLOCATION - Location de voitures",
+  short_name: "INVOLOCATION",
+  description: "INVOLOCATION Location Voiture Marrakech Aeroport l'agence de location de voitures partout au Maroc aux meilleurs conditions.",
   start_url: process.env.GITHUB_ACTIONS ? "/RENTCAR/" : "/",
   display: "standalone",
   background_color: "#ffffff",
-  theme_color: "#08B5F4",
+  theme_color: "#DC2626",
   lang: "fr",
   icons: [
     {
@@ -66,6 +66,13 @@ export default defineConfig({
   ],
   server: {
     port: 3000,
+    proxy: {
+      '/api/send-email': {
+        target: 'https://mceegdufnetfkfdyuaic.supabase.co/functions/v1/send-email',
+        changeOrigin: true,
+        rewrite: () => '',
+      },
+    },
   },
   resolve: {
     alias: {

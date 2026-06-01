@@ -12,15 +12,18 @@ module.exports = {
         remons: {
           primary: 'rgb(var(--primary-rgb) / <alpha-value>)',
           'primary-light': 'rgb(var(--primary-light-rgb) / <alpha-value>)',
-          'primary-dark': '#0597D2',
-          secondary: '#111827',
-          blue: '#2563EB',
+          'primary-dark': '#B91C1C',
+          secondary: '#0F172A',
           dark: 'var(--dark)',
           gray: 'var(--gray)',
-          'light-gray': '#F5F8FB',
-          border: '#E6EDF4',
-          star: '#F5A623',
-        },
+          'light-gray': '#F8FAFC',
+          border: '#E2E8F0',
+          star: '#FBBF24',
+          'performance-orange': '#F97316',
+          'performance-orange-light': '#FB923C',
+          success: '#10B981',
+          'border-luxe': '#E2E8F0',
+        },  
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -37,6 +40,9 @@ module.exports = {
         destructive: {
           DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
           foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
+        },
+        success: {
+          DEFAULT: "hsl(var(--success) / <alpha-value>)",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -76,8 +82,8 @@ module.exports = {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
         card: "0 4px 20px rgba(0,0,0,0.08)",
         elevated: "0 18px 45px rgba(15, 28, 46, 0.14)",
-        button: "0 10px 25px rgba(8,181,244,0.35)",
-        premium: "0 18px 45px rgba(8,181,244,0.24)",
+        button: "0 10px 25px rgba(220,38,38,0.35)",
+        premium: "0 18px 45px rgba(220,38,38,0.24)",
       },
       keyframes: {
         "accordion-down": {

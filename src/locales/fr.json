@@ -1,4 +1,4 @@
-{
+﻿{
   "common": {
     "phone": "+212 6 61 34 14 07",
     "email": "yacout.tours@gmail.com",
@@ -23,7 +23,7 @@
     "menu": "Menu"
   },
   "hero": {
-    "subtitle": "Yacout Tours Marrakech",
+    "subtitle": "INVOLOCATION Marrakech",
     "title": "Location Voiture Marrakech Aeroport<br/>et partout au Maroc<br/>aux meilleures conditions",
     "pickupLabel": "Lieu de prise en charge",
     "pickupPlaceholder": "Sélectionnez",
@@ -43,9 +43,9 @@
     "notSpecifiedF": "Non spécifiée"
   },
   "about": {
-    "subtitle": "YACOUT TOURS À MARRAKECH",
+    "subtitle": "INVOLOCATION À MARRAKECH",
     "title": "Votre partenaire sûr de location<br/>de voitures à Marrakech",
-    "description": "Yacout Tours propose la meilleure sélection de voitures à des prix imbattables pour vos séjours à Marrakech. Profitez du Maroc en toute liberté : ville rouge, désert, vallée de l'Ourika, Haut Atlas, Essaouira, Ouarzazate et excursions sur mesure.",
+    "description": "INVOLOCATION propose la meilleure sélection de voitures à des prix imbattables pour vos séjours à Marrakech. Profitez du Maroc en toute liberté : ville rouge, désert, vallée de l'Ourika, Haut Atlas, Essaouira, Ouarzazate et excursions sur mesure.",
     "features": {
       "booking": {
         "title": "Réservations Rapides & Faciles",
@@ -156,14 +156,14 @@
     "a4": "Nos forfaits incluent un kilométrage illimité sur la plupart de nos véhicules. Certains modèles premium peuvent avoir une limite journalière, veuillez vérifier les conditions lors de la réservation."
   },
   "footer": {
-    "tagline": "Yacout Tours Location Voiture Marrakech Aeroport l’agence de location de voitures partout au Maroc aux meilleurs conditions.",
-    "copyright": "Yacout Tours",
+    "tagline": "INVOLOCATION Location Voiture Marrakech Aeroport l’agence de location de voitures partout au Maroc aux meilleurs conditions.",
+    "copyright": "INVOLOCATION",
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
     "backToTop": "Retour en haut"
   },
   "pwa": {
-    "installTitle": "Installer Yacout Tours",
+    "installTitle": "Installer INVOLOCATION",
     "installDesc": "Ajoutez à votre écran d'accueil",
     "install": "Installer",
     "close": "Fermer"
@@ -182,11 +182,11 @@
         },
         {
           "title": "Procédure de réservation",
-          "content": "Réserver une voiture de location avec YACOUT TOURS à Marrakech ou partout au Maroc vous permet de louer une voiture et des services optionnels tels que la livraison et la restitution à une date et un lieu spécifiés pour une durée de location convenue.\n\nVous pouvez annuler votre réservation à tout moment jusqu'à 48 heures avant la date de prise en charge prévue en nous informant par e-mail ou WhatsApp."
+          "content": "Réserver une voiture de location avec INVOLOCATION à Marrakech ou partout au Maroc vous permet de louer une voiture et des services optionnels tels que la livraison et la restitution à une date et un lieu spécifiés pour une durée de location convenue.\n\nVous pouvez annuler votre réservation à tout moment jusqu'à 48 heures avant la date de prise en charge prévue en nous informant par e-mail ou WhatsApp."
         },
         {
           "title": "Prise en charge et retour du véhicule",
-          "content": "YACOUT TOURS livrera et récupérera votre voiture de location à l'aéroport, aux riads, aux hôtels ou à votre résidence gratuitement à Marrakech et avec des frais supplémentaires dans d'autres villes du Maroc.\n\nIl est possible de louer une voiture dans une ville et de la rendre dans une autre."
+          "content": "INVOLOCATION livrera et récupérera votre voiture de location à l'aéroport, aux riads, aux hôtels ou à votre résidence gratuitement à Marrakech et avec des frais supplémentaires dans d'autres villes du Maroc.\n\nIl est possible de louer une voiture dans une ville et de la rendre dans une autre."
         },
         {
           "title": "Véhicule",
@@ -194,11 +194,11 @@
         },
         {
           "title": "Utilisation du véhicule",
-          "content": "Vous devez utiliser la voiture de location à Marrakech et dans tout le Maroc de manière prudente, conformément à la loi et à des fins légales. Vous ne devez pas participer à des rallyes avec la voiture de location, conduire sur des pistes si le véhicule n'est pas un véhicule tout-terrain, respecter les lois et règlements du Maroc, verrouiller le véhicule et le laisser dans un endroit sûr lorsqu'il n'est pas utilisé, et vous assurer que toutes les fenêtres et les toits ouvrants sont correctement fermés. Si vous remarquez un défaut dans le véhicule, cessez de l'utiliser immédiatement en veillant à votre sécurité et informez-nous immédiatement.\n\nL'utilisation de la voiture de location en dehors du Maroc n'est pas autorisée.\n\nSi vous souhaitez prolonger la location, veuillez nous en informer dès que possible. Faites-le avant la date et l'heure de fin de votre contrat de location, au moins 24 heures à l'avance, et réglez le coût des jours supplémentaires de location à votre retour, tel que fixé par YACOUT TOURS.\n\nLe locataire est responsable du véhicule loué et de ses documents pendant toute la période de location. Le locataire est responsable des frais occasionnés par la perte de documents, d'accessoires ou de dommages au véhicule constatés en son absence."
+          "content": "Vous devez utiliser la voiture de location à Marrakech et dans tout le Maroc de manière prudente, conformément à la loi et à des fins légales. Vous ne devez pas participer à des rallyes avec la voiture de location, conduire sur des pistes si le véhicule n'est pas un véhicule tout-terrain, respecter les lois et règlements du Maroc, verrouiller le véhicule et le laisser dans un endroit sûr lorsqu'il n'est pas utilisé, et vous assurer que toutes les fenêtres et les toits ouvrants sont correctement fermés. Si vous remarquez un défaut dans le véhicule, cessez de l'utiliser immédiatement en veillant à votre sécurité et informez-nous immédiatement.\n\nL'utilisation de la voiture de location en dehors du Maroc n'est pas autorisée.\n\nSi vous souhaitez prolonger la location, veuillez nous en informer dès que possible. Faites-le avant la date et l'heure de fin de votre contrat de location, au moins 24 heures à l'avance, et réglez le coût des jours supplémentaires de location à votre retour, tel que fixé par INVOLOCATION.\n\nLe locataire est responsable du véhicule loué et de ses documents pendant toute la période de location. Le locataire est responsable des frais occasionnés par la perte de documents, d'accessoires ou de dommages au véhicule constatés en son absence."
         },
         {
           "title": "Comportement inacceptable",
-          "content": "L'agence de location de voitures YACOUT TOURS peut refuser de vous louer une voiture si vous manifestez un comportement discourtois ou inacceptable, comme conduire sous l'influence de l'alcool ou des drogues, ou se comporter de manière impolie envers un représentant de l'agence."
+          "content": "L'agence de location de voitures INVOLOCATION peut refuser de vous louer une voiture si vous manifestez un comportement discourtois ou inacceptable, comme conduire sous l'influence de l'alcool ou des drogues, ou se comporter de manière impolie envers un représentant de l'agence."
         },
         {
           "title": "Méthodes de paiement",
@@ -206,22 +206,22 @@
         },
         {
           "title": "Prépaiements et dépôts de garantie",
-          "content": "Lors de la livraison de la voiture, l'agence de location effectuera une préautorisation en tant que dépôt de garantie, qui représente également le montant de la franchise. Votre carte de paiement émise à votre nom et avec des fonds disponibles suffisants sera utilisée à cet effet. Exceptionnellement, YACOUT TOURS peut accepter l'utilisation d'une carte de paiement appartenant à un membre de votre famille."
+          "content": "Lors de la livraison de la voiture, l'agence de location effectuera une préautorisation en tant que dépôt de garantie, qui représente également le montant de la franchise. Votre carte de paiement émise à votre nom et avec des fonds disponibles suffisants sera utilisée à cet effet. Exceptionnellement, INVOLOCATION peut accepter l'utilisation d'une carte de paiement appartenant à un membre de votre famille."
         },
         {
           "title": "Accidents, vols et dommages",
-          "content": "En cas d'accident ou de dommage au véhicule de location, même s'il n'y a pas de tiers impliqué, vous devez immédiatement notifier la police et YACOUT TOURS location de voitures à Marrakech dans les 48 heures.\n\nSi vous êtes responsable du vol ou des dommages causés au véhicule, vous devez payer le montant de la franchise indiqué dans le contrat de location. Votre franchise ne sera pas appliquée si vous pouvez prouver que les dommages, le vol ou la perte ne sont pas dus à votre faute, violation délibérée, fraude ou négligence grave. Vous devez nous fournir un formulaire de constat amiable rempli, y compris les détails des autres parties impliquées, dans les 48 heures suivant l'accident. Vous ne serez pas tenu responsable de toute perte ou dommage attribuable à notre défaut d'entretien du véhicule.\n\nPour les dommages mineurs à l'un de nos véhicules de location, nous ne vous facturerons rien. Exemples de dommages mineurs :\n\n- Petite bosse\n- Petite rayure\n- Taches sur les sièges"
+          "content": "En cas d'accident ou de dommage au véhicule de location, même s'il n'y a pas de tiers impliqué, vous devez immédiatement notifier la police et INVOLOCATION location de voitures à Marrakech dans les 48 heures.\n\nSi vous êtes responsable du vol ou des dommages causés au véhicule, vous devez payer le montant de la franchise indiqué dans le contrat de location. Votre franchise ne sera pas appliquée si vous pouvez prouver que les dommages, le vol ou la perte ne sont pas dus à votre faute, violation délibérée, fraude ou négligence grave. Vous devez nous fournir un formulaire de constat amiable rempli, y compris les détails des autres parties impliquées, dans les 48 heures suivant l'accident. Vous ne serez pas tenu responsable de toute perte ou dommage attribuable à notre défaut d'entretien du véhicule.\n\nPour les dommages mineurs à l'un de nos véhicules de location, nous ne vous facturerons rien. Exemples de dommages mineurs :\n\n- Petite bosse\n- Petite rayure\n- Taches sur les sièges"
         },
         {
           "title": "Assurance et franchise",
-          "content": "Les voitures de location YACOUT TOURS sont entièrement assurées avec un montant de franchise en fonction du type de véhicule :\n\n- 500 euros pour les voitures compactes\n- 1 000 euros pour les voitures intermédiaires et familiales\n- 2 000 euros pour les SUV\n- 2 500 euros pour les véhicules 4x4"
+          "content": "Les voitures de location INVOLOCATION sont entièrement assurées avec un montant de franchise en fonction du type de véhicule :\n\n- 500 euros pour les voitures compactes\n- 1 000 euros pour les voitures intermédiaires et familiales\n- 2 000 euros pour les SUV\n- 2 500 euros pour les véhicules 4x4"
         }
       ]
     },
     "privacy": {
       "title": "Politique de confidentialité - YACOUT RENT CAR",
       "updated": "Dernière mise à jour le 26 juillet 2024",
-      "intro": "Cet avis de confidentialité pour Yacout Rent Car ('nous', 'notre' ou 'nos') décrit comment et pourquoi nous pourrions collecter, stocker, utiliser et/ou partager vos informations lorsque vous utilisez nos services, par exemple lorsque vous visitez notre site web à https://yacout-tours.com ou tout autre site web de notre société qui renvoie à cet avis de confidentialité.",
+      "intro": "Cet avis de confidentialité pour INVOLOCATION ('nous', 'notre' ou 'nos') décrit comment et pourquoi nous pourrions collecter, stocker, utiliser et/ou partager vos informations lorsque vous utilisez nos services, par exemple lorsque vous visitez notre site web à https://yacout-tours.com ou tout autre site web de notre société qui renvoie à cet avis de confidentialité.",
       "sections": [
         {
           "title": "Résumé des points clés",
@@ -269,7 +269,7 @@
         },
         {
           "title": "11. Comment pouvez-vous nous contacter au sujet de cet avis ?",
-          "content": "Si vous avez des questions ou des commentaires sur le présent avis, vous pouvez nous contacter par courrier à l'adresse suivante : Yacout tours, 100 Rue Mohammed el Beqal, Marrakech 40000, Maroc — yacout.tours@gmail.com"
+          "content": "Si vous avez des questions ou des commentaires sur le présent avis, vous pouvez nous contacter par courrier à l'adresse suivante : INVOLOCATION, 100 Rue Mohammed el Beqal, Marrakech 40000, Maroc — yacout.tours@gmail.com"
         },
         {
           "title": "12. Comment pouvez-vous consulter, mettre à jour ou supprimer les données que nous recueillons auprès de vous ?",

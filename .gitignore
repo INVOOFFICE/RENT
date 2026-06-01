@@ -25,3 +25,12 @@ dist-ssr
 
 .env
 /Vid.mp4
+
+# Build artifacts (VitePWA / Workbox)
+/assets/
+/sw.js
+/registerSW.js
+/workbox-*.js
+
+# Supabase CLI temp
+supabase/.temp/

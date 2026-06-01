@@ -1,6 +1,5 @@
-
-import { useTranslation } from 'react-i18next';
-import { ArrowUp } from 'lucide-react';
+﻿import { useTranslation } from 'react-i18next';
+import { ArrowUp, Star, LogIn } from 'lucide-react';
 import { img } from '@/lib/utils';
 import { useState } from 'react';
 import TermsModal from '@/components/TermsModal';
@@ -32,55 +31,87 @@ export default function Footer() {
   const [termsOpen, setTermsOpen] = useState(false);
   const [privacyOpen, setPrivacyOpen] = useState(false);
   return (
-    <footer id="contact" className="bg-remons-secondary pt-20 pb-10">
+    <footer id="contact" className="bg-background pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Bar */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 pb-10 mb-10 border-b border-white/10">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img src={img('/pwa.png')} alt="Yacout Tours" className="h-28 w-auto" />
-          </a>
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 pb-10 mb-10 border-b border-border">
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            {/* Logo */}
+            <a href="#" className="flex items-center gap-3">
+              <img src={img('/pwa.png')} alt="INVOLOCATION" className="h-28 w-auto" />
+            </a>
 
-          {/* Tagline */}
-          <p className="text-white/80 font-poppins text-lg font-semibold">
-            {t('footer.tagline')}
-          </p>
+            {/* Tagline */}
+            <p className="text-muted-foreground font-poppins text-lg font-semibold">
+              {t('footer.tagline')}
+            </p>
 
-          {/* Social */}
-          <div className="flex items-center gap-3">
-            {socialLinks.map((link) => (
+            {/* Social */}
+            <div className="flex items-center gap-3">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-remons-primary hover:text-white transition-colors duration-300"
+                  aria-label={link.name}
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    {link.icon}
+                  </svg>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Review Panel */}
+          <div className="relative rounded-xl overflow-hidden shrink-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-remons-primary to-remons-secondary" />
+            <div className="relative z-10 text-center px-6 py-4">
+              <div className="flex items-center justify-center gap-0.5 mb-1">
+                {Array.from({ length: 5 }, (_, i) => (
+                  <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+              <h3 className="font-poppins text-lg font-bold text-white leading-tight mb-1">
+                {t('gallery.title')}
+              </h3>
+              <p className="text-white/80 text-xs font-inter mb-2">
+                Note 4.9/5 sur Google
+              </p>
               <a
-                key={link.name}
-                href={link.href}
+                href="https://search.google.com/local/writereview?placeid=ChIJS4Si8pHurw0RBf6gdITg6Rw"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-remons-primary transition-colors duration-300"
-                aria-label={link.name}
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-remons-primary font-semibold font-inter text-xs hover:scale-105 hover:shadow-lg transition-all duration-300"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  {link.icon}
-                </svg>
+                Donnez votre avis
               </a>
-            ))}
+            </div>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/50 text-sm font-inter">
-            &copy; {new Date().getFullYear()} {t('footer.copyright')} — {t('common.address')} — {t('common.phone')}
+        <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-muted-foreground text-sm font-inter">
+            &copy; {new Date().getFullYear()} {t('footer.copyright')}
             {' — '}
-            <button onClick={() => setTermsOpen(true)} className="underline hover:text-white transition-colors">
+            <button onClick={() => setTermsOpen(true)} className="underline hover:text-foreground transition-colors">
               {t('footer.terms')}
             </button>
             {' — '}
-            <button onClick={() => setPrivacyOpen(true)} className="underline hover:text-white transition-colors">
+            <button onClick={() => setPrivacyOpen(true)} className="underline hover:text-foreground transition-colors">
               {t('footer.privacy')}
             </button>
+            {' — '}
+            <a href="/admin/login" className="inline-flex items-center gap-1 underline hover:text-foreground transition-colors">
+              <LogIn size={12} /> Connexion
+            </a>
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white/60 hover:bg-remons-primary hover:text-white transition-all duration-300"
+            className="w-9 h-9 rounded-full bg-muted flex items-center justify-center text-muted-foreground hover:bg-remons-primary hover:text-white transition-all duration-300"
             aria-label={t('footer.backToTop')}
           >
             <ArrowUp size={16} />

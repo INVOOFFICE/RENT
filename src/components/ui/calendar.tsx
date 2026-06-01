@@ -13,7 +13,6 @@ import {
 } from "react-day-picker"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 
 const WEEKDAYS_SHORT = ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa']
 
@@ -176,10 +175,8 @@ function CalendarDayButton({
   const isToday = modifiers.today && !isSingleSelected
 
   return (
-    <Button
+    <button
       ref={ref}
-      variant="ghost"
-      size="icon"
       data-day={day.date.toLocaleDateString()}
       className={cn(
         "relative w-9 h-9 sm:w-10 sm:h-10 mx-auto p-0 rounded-full font-inter text-[13px] sm:text-sm transition-all duration-150",

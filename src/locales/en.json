@@ -1,4 +1,4 @@
-{
+﻿{
   "common": {
     "phone": "+212 6 61 34 14 07",
     "email": "yacout.tours@gmail.com",
@@ -23,7 +23,7 @@
     "menu": "Menu"
   },
   "hero": {
-    "subtitle": "Yacout Tours Marrakech",
+    "subtitle": "INVOLOCATION Marrakech",
     "title": "Car Rental Marrakech Airport<br/>and everywhere in Morocco<br/>at the best conditions",
     "pickupLabel": "Pick-up Location",
     "pickupPlaceholder": "Select",
@@ -43,9 +43,9 @@
     "notSpecifiedF": "Not specified"
   },
   "about": {
-    "subtitle": "YACOUT TOURS IN MARRAKECH",
+    "subtitle": "INVOLOCATION IN MARRAKECH",
     "title": "Your car rental agency<br/>in Marrakech",
-    "description": "Yacout Tours offers the best selection of cars at unbeatable prices for your stay in Marrakech. Enjoy Morocco in total freedom: red city, desert, Ourika Valley, High Atlas, Essaouira, Ouarzazate and custom excursions.",
+    "description": "INVOLOCATION offers the best selection of cars at unbeatable prices for your stay in Marrakech. Enjoy Morocco in total freedom: red city, desert, Ourika Valley, High Atlas, Essaouira, Ouarzazate and custom excursions.",
     "features": {
       "booking": {
         "title": "Fast & Easy Booking",
@@ -156,14 +156,14 @@
     "a4": "Our packages include unlimited mileage on most of our vehicles. Some premium models may have a daily limit, please check the conditions when booking."
   },
   "footer": {
-    "tagline": "Yacout Tours Car Rental Marrakech Airport the car rental agency everywhere in Morocco at the best conditions.",
-    "copyright": "Yacout Tours",
+    "tagline": "INVOLOCATION Car Rental Marrakech Airport the car rental agency everywhere in Morocco at the best conditions.",
+    "copyright": "INVOLOCATION",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "backToTop": "Back to top"
   },
   "pwa": {
-    "installTitle": "Install Yacout Tours",
+    "installTitle": "Install INVOLOCATION",
     "installDesc": "Add to your home screen",
     "install": "Install",
     "close": "Close"
@@ -182,11 +182,11 @@
         },
         {
           "title": "Booking procedure",
-          "content": "Booking a rental car with YACOUT TOURS in Marrakech or anywhere in Morocco allows you to rent a car and optional services such as delivery and return at a specified date and location for an agreed rental period.\n\nYou may cancel your booking at any time up to 48 hours before the scheduled pick-up date by informing us by email or WhatsApp."
+          "content": "Booking a rental car with INVOLOCATION in Marrakech or anywhere in Morocco allows you to rent a car and optional services such as delivery and return at a specified date and location for an agreed rental period.\n\nYou may cancel your booking at any time up to 48 hours before the scheduled pick-up date by informing us by email or WhatsApp."
         },
         {
           "title": "Vehicle pick-up and return",
-          "content": "YACOUT TOURS will deliver and collect your rental car at the airport, riads, hotels or your residence free of charge in Marrakech and with additional fees in other cities in Morocco.\n\nIt is possible to rent a car in one city and return it in another."
+          "content": "INVOLOCATION will deliver and collect your rental car at the airport, riads, hotels or your residence free of charge in Marrakech and with additional fees in other cities in Morocco.\n\nIt is possible to rent a car in one city and return it in another."
         },
         {
           "title": "Vehicle",
@@ -194,11 +194,11 @@
         },
         {
           "title": "Vehicle use",
-          "content": "You must use the rental car in Marrakech and throughout Morocco carefully, legally and for lawful purposes. You must not participate in rallies with the rental car, drive on tracks unless the vehicle is an off-road vehicle, violate Moroccan laws or regulations, leave the vehicle unlocked or unsafe when not in use, or leave windows and sunroofs open. If you notice a fault in the vehicle, stop using it immediately while ensuring your safety and inform us immediately.\n\nUse of the rental car outside Morocco is not permitted.\n\nIf you wish to extend the rental, please inform us as soon as possible. Do so before the end date and time of your rental agreement, at least 24 hours in advance, and pay the cost of the additional rental days upon return, as set by YACOUT TOURS.\n\nThe renter is responsible for the rented vehicle and its documents during the entire rental period. The renter is responsible for costs caused by loss of documents, accessories or damage to the vehicle noticed in their absence."
+          "content": "You must use the rental car in Marrakech and throughout Morocco carefully, legally and for lawful purposes. You must not participate in rallies with the rental car, drive on tracks unless the vehicle is an off-road vehicle, violate Moroccan laws or regulations, leave the vehicle unlocked or unsafe when not in use, or leave windows and sunroofs open. If you notice a fault in the vehicle, stop using it immediately while ensuring your safety and inform us immediately.\n\nUse of the rental car outside Morocco is not permitted.\n\nIf you wish to extend the rental, please inform us as soon as possible. Do so before the end date and time of your rental agreement, at least 24 hours in advance, and pay the cost of the additional rental days upon return, as set by INVOLOCATION.\n\nThe renter is responsible for the rented vehicle and its documents during the entire rental period. The renter is responsible for costs caused by loss of documents, accessories or damage to the vehicle noticed in their absence."
         },
         {
           "title": "Unacceptable behavior",
-          "content": "YACOUT TOURS car rental agency may refuse to rent you a car if you show discourteous or unacceptable behavior, such as driving under the influence of alcohol or drugs, or behaving rudely toward an agency representative."
+          "content": "INVOLOCATION car rental agency may refuse to rent you a car if you show discourteous or unacceptable behavior, such as driving under the influence of alcohol or drugs, or behaving rudely toward an agency representative."
         },
         {
           "title": "Payment methods",
@@ -206,22 +206,22 @@
         },
         {
           "title": "Prepayments and security deposits",
-          "content": "When the car is delivered, the rental agency will make a pre-authorization as a security deposit, which also represents the deductible amount. Your payment card issued in your name and with sufficient available funds will be used for this purpose. Exceptionally, YACOUT TOURS may accept the use of a payment card belonging to a family member."
+          "content": "When the car is delivered, the rental agency will make a pre-authorization as a security deposit, which also represents the deductible amount. Your payment card issued in your name and with sufficient available funds will be used for this purpose. Exceptionally, INVOLOCATION may accept the use of a payment card belonging to a family member."
         },
         {
           "title": "Accidents, theft and damage",
-          "content": "In the event of an accident or damage to the rental vehicle, even if no third party is involved, you must immediately notify the police and YACOUT TOURS car rental in Marrakech within 48 hours.\n\nIf you are responsible for theft or damage to the vehicle, you must pay the deductible amount stated in the rental agreement. Your deductible will not apply if you can prove that the damage, theft or loss was not due to your fault, intentional breach, fraud or gross negligence. You must provide us with a completed accident report form, including details of the other parties involved, within 48 hours of the accident. You will not be held responsible for any loss or damage attributable to our failure to maintain the vehicle.\n\nFor minor damage to one of our rental vehicles, we will not charge you. Examples of minor damage include:\n\n- Small dent\n- Small scratch\n- Seat stains"
+          "content": "In the event of an accident or damage to the rental vehicle, even if no third party is involved, you must immediately notify the police and INVOLOCATION car rental in Marrakech within 48 hours.\n\nIf you are responsible for theft or damage to the vehicle, you must pay the deductible amount stated in the rental agreement. Your deductible will not apply if you can prove that the damage, theft or loss was not due to your fault, intentional breach, fraud or gross negligence. You must provide us with a completed accident report form, including details of the other parties involved, within 48 hours of the accident. You will not be held responsible for any loss or damage attributable to our failure to maintain the vehicle.\n\nFor minor damage to one of our rental vehicles, we will not charge you. Examples of minor damage include:\n\n- Small dent\n- Small scratch\n- Seat stains"
         },
         {
           "title": "Insurance and deductible",
-          "content": "YACOUT TOURS rental cars are fully insured with a deductible amount depending on the vehicle type:\n\n- 500 euros for compact cars\n- 1,000 euros for intermediate and family cars\n- 2,000 euros for SUVs\n- 2,500 euros for 4x4 vehicles"
+          "content": "INVOLOCATION rental cars are fully insured with a deductible amount depending on the vehicle type:\n\n- 500 euros for compact cars\n- 1,000 euros for intermediate and family cars\n- 2,000 euros for SUVs\n- 2,500 euros for 4x4 vehicles"
         }
       ]
     },
     "privacy": {
       "title": "Privacy Policy - YACOUT RENT CAR",
       "updated": "Last updated on July 26, 2024",
-      "intro": "This privacy notice for Yacout Rent Car ('we', 'us' or 'our') describes how and why we may collect, store, use and/or share your information when you use our services, such as when you visit our website at https://yacout-tours.com or any other company website that links to this privacy notice.",
+      "intro": "This privacy notice for INVOLOCATION ('we', 'us' or 'our') describes how and why we may collect, store, use and/or share your information when you use our services, such as when you visit our website at https://yacout-tours.com or any other company website that links to this privacy notice.",
       "sections": [
         {
           "title": "Summary of key points",
@@ -269,7 +269,7 @@
         },
         {
           "title": "11. How can you contact us about this notice?",
-          "content": "If you have questions or comments about this notice, you can contact us by mail at: Yacout tours, 100 Rue Mohammed el Beqal, Marrakech 40000, Morocco — yacout.tours@gmail.com"
+          "content": "If you have questions or comments about this notice, you can contact us by mail at: INVOLOCATION, 100 Rue Mohammed el Beqal, Marrakech 40000, Morocco — yacout.tours@gmail.com"
         },
         {
           "title": "12. How can you review, update or delete the data we collect from you?",

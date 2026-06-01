@@ -1,25 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { gsap } from 'gsap';
-import { ChevronDown, Headphones, MousePointerClick, ShieldCheck } from 'lucide-react';
+import { Headphones, MousePointerClick, ShieldCheck } from 'lucide-react';
 import { img } from '@/lib/utils';
 import { DatePicker } from '@/components/DatePicker';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import { supabase } from '@/lib/supabase';
 
-const PHONE = '212661341407';
+const PHONE = '212630230803';
 const featureKeys = ['express', 'insurance', 'support'] as const;
 
 export default function Hero() {
   const { t } = useTranslation();
-  const locations = [
-    'Marrakech ville', 'Aéroport Marrakech',
-    'Casablanca ville', 'Aéroport Casablanca',
-    'Rabat ville', 'Aéroport Rabat',
-    'Agadir ville', 'Aéroport Agadir',
-    'Fès ville', 'Aéroport Fès',
-    'Ouarzazate ville', 'Aéroport Ouarzazate',
-    'Essaouira ville', 'Aéroport Essaouira',
-    'Tanger ville', 'Aéroport Tanger',
-  ];
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
@@ -28,14 +26,27 @@ export default function Hero() {
   const [pickupDate, setPickupDate] = useState('');
   const [returnDate, setReturnDate] = useState('');
   const [carNames, setCarNames] = useState<string[]>([]);
-  const [location, setLocation] = useState(locations[0]);
+  const [locations, setLocations] = useState<string[]>([]);
+  const [location, setLocation] = useState('');
   const [vehicleType, setVehicleType] = useState('');
 
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/cars.json`)
-      .then((res) => res.json())
-      .then((data) => setCarNames(data.map((c: { name: string }) => c.name)))
-      .catch(() => {});
+    Promise.all([
+      supabase.from('cars').select('name').eq('active', true).order('id'),
+      supabase.from('transport_prices').select('from_location, to_location'),
+    ]).then(([carsRes, transportRes]) => {
+      if (!carsRes.error && carsRes.data) setCarNames(carsRes.data.map((c) => c.name));
+      if (!transportRes.error && transportRes.data) {
+        const set = new Set<string>();
+        for (const p of transportRes.data) {
+          set.add(p.from_location);
+          set.add(p.to_location);
+        }
+        const sorted = Array.from(set).sort();
+        setLocations(sorted);
+        setLocation(sorted[0] || '');
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -159,18 +170,16 @@ export default function Hero() {
             <label className="block text-white text-[13px] font-inter font-medium mb-2">
                     Lieu de prise en charge / Livraison
             </label>
-            <div className="relative">
-              <select
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-                className="w-full bg-white rounded-xl px-4 py-3.5 pr-10 appearance-none font-inter text-remons-dark text-sm focus:outline-none focus:ring-2 focus:ring-white/30"
-              >
+            <Select value={location} onValueChange={setLocation}>
+              <SelectTrigger className="w-full bg-white/95 rounded-xl px-4 py-3.5 h-auto border-0 shadow-sm text-remons-dark text-sm">
+                <SelectValue placeholder="Sélectionner un lieu" />
+              </SelectTrigger>
+              <SelectContent>
                 {locations.map((loc) => (
-                  <option key={loc}>{loc}</option>
+                  <SelectItem key={loc} value={loc}>{loc}</SelectItem>
                 ))}
-              </select>
-              <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-remons-gray pointer-events-none" />
-            </div>
+              </SelectContent>
+            </Select>
           </div>
 
           {/* Dates */}
@@ -200,19 +209,16 @@ export default function Hero() {
             <label className="block text-white text-[13px] font-inter font-medium mb-2">
               {t('hero.vehicleLabel')}
             </label>
-            <div className="relative">
-              <select
-                value={vehicleType}
-                onChange={(e) => setVehicleType(e.target.value)}
-                className="w-full bg-white rounded-xl px-4 py-3.5 pr-10 appearance-none font-inter text-remons-dark text-sm focus:outline-none focus:ring-2 focus:ring-white/30"
-              >
-                <option value="">{t('hero.vehiclePlaceholder')}</option>
+            <Select value={vehicleType} onValueChange={setVehicleType}>
+              <SelectTrigger className="w-full bg-white/95 rounded-xl px-4 py-3.5 h-auto border-0 shadow-sm text-remons-dark text-sm">
+                <SelectValue placeholder={t('hero.vehiclePlaceholder')} />
+              </SelectTrigger>
+              <SelectContent>
                 {carNames.map((name) => (
-                  <option key={name} value={name}>{name}</option>
+                  <SelectItem key={name} value={name}>{name}</SelectItem>
                 ))}
-              </select>
-              <ChevronDown size={16} className="absolute right-4 top-1/2 -translate-y-1/2 text-remons-gray pointer-events-none" />
-            </div>
+              </SelectContent>
+            </Select>
           </div>
 
           {/* Submit Button */}
