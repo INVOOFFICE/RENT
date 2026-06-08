@@ -250,6 +250,23 @@ async function seedTransportPrices() {
   console.log(`  ✓ ${prices.length} prix transport insérés`);
 }
 
+// ─── Drivers Settings ─────────────────────────────────────
+
+async function seedDriversSettings() {
+  console.log('Insertion des paramètres chauffeurs...');
+  const { error } = await supabase.from('drivers_settings').upsert({
+    enabled: true,
+    price_per_hour: 10,
+    half_day_price: 40,
+    full_day_price: 70,
+    price_24h: 120,
+    airport_extra: 15,
+    night_extra: 20,
+  }, { ignoreDuplicates: false });
+  if (error && !error.message.includes('does not exist')) throw error;
+  console.log('  ✓ Paramètres chauffeurs insérés');
+}
+
 // ─── Main ──────────────────────────────────────────────────
 
 async function main() {
@@ -267,6 +284,7 @@ async function main() {
     await seedSettings();
     await seedFranchises();
     await seedTransportPrices();
+    await seedDriversSettings();
 
     console.log(`\n✅ Terminé ! Connectez-vous sur /admin/login avec :
    Email    : ${ADMIN_EMAIL}

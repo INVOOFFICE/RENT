@@ -1,10 +1,19 @@
 import { useCurrency, convertPrice } from '@/lib/currency';
 import type { Reservation } from '@/lib/supabase';
+import { Trash2 } from 'lucide-react';
+
+const CHAUFFEUR_LABELS: Record<string, string> = {
+  hourly: 'À l\'heure',
+  half_day: 'Demi-journée',
+  full_day: 'Journée',
+  '24h': '24h',
+};
 
 interface ReservationTableProps {
   reservations: Reservation[];
   loading: boolean;
   onStatusChange: (id: number, status: Reservation['status']) => void;
+  onDelete: (id: number) => void;
   emptyMessage?: string;
 }
 
@@ -19,10 +28,10 @@ const STATUS_COLORS: Record<Reservation['status'], string> = {
   new: 'bg-blue-50 text-blue-600',
   contacted: 'bg-yellow-50 text-yellow-600',
   confirmed: 'bg-green-50 text-green-600',
-  cancelled: 'bg-red-50 text-red-600',
+  cancelled: 'bg-remons-primary/10 text-remons-primary',
 };
 
-export default function ReservationTable({ reservations, loading, onStatusChange, emptyMessage }: ReservationTableProps) {
+export default function ReservationTable({ reservations, loading, onStatusChange, onDelete, emptyMessage }: ReservationTableProps) {
   const { currency } = useCurrency();
   if (loading) {
     return (
@@ -50,8 +59,10 @@ export default function ReservationTable({ reservations, loading, onStatusChange
             <th className="text-left py-3 px-3 font-semibold text-remons-dark">Voiture</th>
             <th className="text-left py-3 px-3 font-semibold text-remons-dark">Du</th>
             <th className="text-left py-3 px-3 font-semibold text-remons-dark">Au</th>
+            <th className="text-left py-3 px-3 font-semibold text-remons-dark">Chauffeur</th>
             <th className="text-right py-3 px-3 font-semibold text-remons-dark">Total</th>
             <th className="text-center py-3 px-3 font-semibold text-remons-dark">Statut</th>
+            <th className="text-center py-3 px-3 font-semibold text-remons-dark">Action</th>
           </tr>
         </thead>
         <tbody>
@@ -75,6 +86,18 @@ export default function ReservationTable({ reservations, loading, onStatusChange
               <td className="py-3 px-3 text-remons-gray whitespace-nowrap">
                 {new Date(res.end_date).toLocaleDateString('fr-FR')}
               </td>
+              <td className="py-3 px-3 whitespace-nowrap">
+                {res.chauffeur_enabled ? (
+                  <div className="text-remons-dark">
+                    <span className="font-medium">{CHAUFFEUR_LABELS[res.chauffeur_type ?? ''] || res.chauffeur_type}</span>
+                    <span className="text-remons-gray text-xs ml-1">
+                      {res.chauffeur_price != null ? `${convertPrice(res.chauffeur_price, currency.code)} ${currency.symbol}` : ''}
+                    </span>
+                  </div>
+                ) : (
+                  <span className="text-remons-gray text-xs">—</span>
+                )}
+              </td>
               <td className="py-3 px-3 text-right font-medium text-remons-dark whitespace-nowrap">
                 {convertPrice(res.total_eur, currency.code)} {currency.symbol}
               </td>
@@ -88,6 +111,15 @@ export default function ReservationTable({ reservations, loading, onStatusChange
                     <option key={value} value={value}>{label}</option>
                   ))}
                 </select>
+              </td>
+              <td className="py-3 px-3 text-center whitespace-nowrap">
+                <button
+                  onClick={() => onDelete(res.id)}
+                  className="p-1.5 rounded-lg text-red-400 hover:text-white hover:bg-red-500 transition-colors"
+                  title="Supprimer"
+                >
+                  <Trash2 size={14} />
+                </button>
               </td>
             </tr>
           ))}

@@ -1,30 +1,30 @@
 ﻿{
   "common": {
-    "phone": "+212 6 61 34 14 07",
-    "email": "yacout.tours@gmail.com",
-    "address": "100 Rue Mohammed el Beqal, Marrakech 40000, Maroc",
+    "phone": "+212 661 175 193",
+    "email": "contact@moveup-automotive.ma",
+    "address": "Casablanca, Maroc",
     "close": "Fermer"
   },
   "topbar": {
-    "email": "yacout.tours@gmail.com",
-    "address": "100 Rue Mohammed el Beqal, Marrakech"
+    "email": "contact@moveup-automotive.ma",
+    "address": "Casablanca, Maroc"
   },
   "navbar": {
     "home": "Accueil",
     "about": "À Propos",
-    "gallery": "Témoignages",
-    "cars": "Voitures",
+    "gallery": "Avis Clients",
+    "cars": "Nos Services",
     "contact": "Contact",
-    "findCar": "Trouver une Voiture",
-    "brand": "YACOUT",
-    "brandSub": "tours",
+    "findCar": "Réserver un Transfert",
+    "brand": "MOVE UP",
+    "brandSub": "automotive",
     "callUs": "Appelez à tout moment",
     "search": "Rechercher",
     "menu": "Menu"
   },
   "hero": {
-    "subtitle": "INVOLOCATION Marrakech",
-    "title": "Location de Voiture à Marrakech Aéroport<br/>et partout au Maroc",
+    "subtitle": "MOVE UP AUTOMOTIVE — CASABLANCA",
+    "title": "Service de Chauffeur Privé<br/>et Transport Premium au Maroc",
     "pickupLabel": "Lieu de prise en charge",
     "pickupPlaceholder": "Sélectionnez",
     "startDateLabel": "Date de prise en charge",
@@ -43,17 +43,17 @@
     "notSpecifiedF": "Non spécifiée"
   },
   "about": {
-    "subtitle": "INVOLOCATION À MARRAKECH",
-    "title": "Votre partenaire sûr de location<br/>de voitures à Marrakech",
-    "description": "INVOLOCATION propose la meilleure sélection de voitures à des prix imbattables pour vos séjours à Marrakech. Profitez du Maroc en toute liberté : ville rouge, désert, vallée de l'Ourika, Haut Atlas, Essaouira, Ouarzazate et excursions sur mesure.",
+    "subtitle": "MOVE UP AUTOMOTIVE",
+    "title": "L'Excellence du Transport<br/>sur Mesure",
+    "description": "Move Up Automotive est votre partenaire de confiance pour tous vos déplacements au Maroc. Spécialiste du transport premium et du service de chauffeur privé, nous vous offrons une expérience sur mesure alliant confort, ponctualité et professionnalisme. Que ce soit pour un transfert aéroport, un circuit touristique, un déplacement professionnel ou un événement spécial, notre flotte de véhicules haut de gamme et nos chauffeurs expérimentés vous garantissent un service d'exception.",
     "features": {
       "booking": {
-        "title": "Réservations Rapides & Faciles",
-        "desc": "Réservez votre voiture en minutes grâce à notre processus simplifié."
+        "title": "Chauffeur Professionnel",
+        "desc": "Des chauffeurs expérimentés, formés à l'excellence du service premium."
       },
       "locations": {
-        "title": "Multiples Lieux de Prise en Charge",
-        "desc": "Plusieurs emplacements pratiques à travers la ville."
+        "title": "Tout le Maroc",
+        "desc": "Casablanca, Marrakech, Rabat, Tanger, Agadir, Fès et plus encore."
       }
     },
     "pickupLabel": "Lieu de prise en charge",
@@ -66,7 +66,7 @@
     "airport": "Aéroport",
     "consultantAlt": "Consultant professionnel",
     "bookingTitle": "*Nouvelle Réservation*",
-    "carField": "*Voiture :* ",
+    "carField": "*Véhicule :* ",
     "priceField": "*Prix :* ",
     "nameField": "*Nom :* ",
     "emailField": "*Email :* ",
@@ -80,9 +80,9 @@
     "submitErrorMessage": "Erreur pendant l'envoi vers Google Sheet."
   },
   "cars": {
-    "subtitle": "DÉCOUVREZ NOS NOUVEAUX VÉHICULES",
-    "title": "Voitures Que Nous Proposons<br/>À La Location",
-    "error": "Impossible de charger les voitures pour le moment.",
+    "subtitle": "DÉCOUVREZ NOS SERVICES",
+    "title": "Nos Véhicules<br/>À Votre Service",
+    "error": "Impossible de charger les données pour le moment.",
     "modal": {
       "close": "Fermer",
       "title": "Réserver",
@@ -95,11 +95,11 @@
       "startDate": "Date de départ",
       "endDate": "Date de retour",
       "location": "Lieu de prise en charge / Livraison",
-      "selectedCar": "Voiture choisie",
+      "selectedCar": "Véhicule choisi",
       "submit": "Envoyer via WhatsApp"
     },
     "bookingTitle": "*Nouvelle Réservation*",
-    "carField": "*Voiture :* ",
+    "carField": "*Véhicule :* ",
     "priceField": "*Prix :* ",
     "nameField": "*Nom :* ",
     "emailField": "*Email :* ",
@@ -113,57 +113,62 @@
     "submitErrorMessage": "Erreur pendant l'envoi vers Google Sheet.",
     "bookNow": "Réserver Maintenant",
     "seats": "Places",
-    "doors": "Portes"
+    "doors": "Portes",
+    "chauffeurOption": "Ajouter un chauffeur",
+    "chauffeurHourly": "À l'heure",
+    "chauffeurHalfDay": "Demi-journée (4h)",
+    "chauffeurFullDay": "Journée (8h)",
+    "chauffeur24h": "24h"
   },
   "gallery": {
-    "title": "Témoignages",
-    "alt": "Galerie"
+    "title": "Ils nous recommandent",
+    "alt": "Avis clients"
   },
   "features": {
     "express": {
-      "title": "Réservation Express",
-      "desc": "Réservez en 2 clics, récupérez votre véhicule immédiatement."
+      "title": "Réservation Simplifiée",
+      "desc": "Réservez votre chauffeur en quelques clics, nous nous occupons du reste."
     },
     "insurance": {
-      "title": "Assurance Incluse",
-      "desc": "Tous nos véhicules sont couverts par une assurance complète."
+      "title": "Sécurité & Confiance",
+      "desc": "Véhicules premium, entretien rigoureux et chauffeurs qualifiés pour votre sérénité."
     },
     "support": {
       "title": "Support 24/7",
-      "desc": "Une équipe disponible à tout moment pour vous assister."
+      "desc": "Une équipe dédiée disponible à tout moment pour répondre à vos besoins."
     }
   },
   "testimonials": {
-    "testimonial1": "Grâce à leur excellent service, leurs prix compétitifs et leur support client. C'est vraiment rafraîchissant de bénéficier d'une attention si personnalisée.",
-    "testimonial2": "Grâce à leur excellent service, leurs prix compétitifs et leur support client. C'est vraiment rafraîchissant de bénéficier d'une attention si personnalisée.",
-    "testimonial3": "Grâce à leur excellent service, leurs prix compétitifs et leur support client. C'est vraiment rafraîchissant de bénéficier d'une attention si personnalisée.",
+    "testimonial1": "Service impeccable ! Chauffeur ponctuel, véhicule luxueux et conduite parfaite. Une expérience digne des plus grands standards internationaux.",
+    "testimonial2": "J'ai utilisé Move Up Automotive pour mes déplacements professionnels à Casablanca. Un professionnalisme remarquable, je recommande vivement.",
+    "testimonial3": "Transfert aéroport organisé sans aucune difficulté. Accueil chaleureux, confort absolu. Mon nouveau réflexe au Maroc.",
     "role": "Client",
-    "prev": "Témoignage précédent",
-    "next": "Témoignage suivant"
+    "prev": "Avis précédent",
+    "next": "Avis suivant"
   },
   "faq": {
     "sectionTitle": "QUESTIONS FRÉQUENTES",
-    "sectionHeading": "Vous avez des questions<br/>sur la location ?",
+    "sectionHeading": "Vous avez des questions<br/>sur nos services ?",
     "moreQuestions": "Vous avez d'autres questions ?",
     "contactWhatsApp": "Contactez-nous sur WhatsApp",
-    "q1": "Comment réserver une voiture ?",
-    "a1": "La réservation est simple et rapide. Choisissez votre véhicule, sélectionnez vos dates de prise en charge et de retour, puis confirmez votre réservation en ligne. Notre équipe vous contactera pour finaliser les détails.",
-    "q2": "Quels sont les modes de paiement acceptés ?",
-    "a2": "Nous acceptons les cartes bancaires (Visa, Mastercard), les virements bancaires et les paiements en espèces lors de la prise en charge du véhicule.",
+    "q1": "Comment réserver un chauffeur ?",
+    "a1": "La réservation est simple et rapide. Choisissez votre service (transfert aéroport, circuit touristique, transport d'affaires), sélectionnez vos dates et lieux, puis confirmez votre réservation. Notre équipe vous contactera pour finaliser les détails de votre prise en charge.",
+    "q2": "Quels types de véhicules proposez-vous ?",
+    "a2": "Notre flotte premium comprend la Skoda Superb, Skoda Octavia et le Mercedes Vito. Chaque véhicule est soigneusement entretenu et équipé pour votre confort optimal.",
     "q3": "Puis-je annuler ma réservation ?",
-    "a3": "Oui, vous pouvez annuler votre réservation jusqu'à 24 heures avant la date de prise en charge sans frais. Des frais de 50 % s'appliquent pour les annulations tardives.",
-    "q4": "Y a-t-il une limite de kilométrage ?",
-    "a4": "Nos forfaits incluent un kilométrage illimité sur la plupart de nos véhicules. Certains modèles premium peuvent avoir une limite journalière, veuillez vérifier les conditions lors de la réservation."
+    "a3": "Oui, vous pouvez annuler votre réservation jusqu'à 24 heures avant la prise en charge sans frais. Des frais de 50 % s'appliquent pour les annulations tardives.",
+    "q4": "Quelles villes desservez-vous ?",
+    "a4": "Nous couvrons les principales villes du Maroc : Casablanca, Marrakech, Rabat, Tanger, Agadir, Fès et leurs aéroports. Des destinations supplémentaires peuvent être organisées sur demande."
   },
   "footer": {
-    "tagline": "INVOLOCATION Location de Voiture à Marrakech Aéroport et partout au Maroc",
-    "copyright": "INVOLOCATION",
+    "tagline": "Move Up Automotive — L'Excellence du Transport sur Mesure au Maroc",
+    "copyright": "2026 Move Up Automotive. Tous droits réservés.",
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
     "backToTop": "Retour en haut"
   },
   "pwa": {
-    "installTitle": "Installer INVOLOCATION",
+    "installTitle": "Installer Move Up Automotive",
     "installDesc": "Ajoutez à votre écran d'accueil",
     "install": "Installer",
     "close": "Fermer"
@@ -174,54 +179,54 @@
   },
   "legal": {
     "terms": {
-      "title": "Conditions générales - YACOUT RENT CAR",
+      "title": "Conditions générales - MOVE UP AUTOMOTIVE",
       "sections": [
         {
           "title": "Limite d'âge, conducteurs et documents",
-          "content": "Le conducteur principal et tout conducteur additionnel mentionné sur le contrat de location sont les seuls autorisés à conduire la voiture de location. Ils doivent avoir plus de 21 ans et posséder un permis de conduire valide obtenu depuis au moins un an.\n\nAjouter un deuxième conducteur est gratuit.\n\nPour louer une voiture, vous devez présenter un permis de conduire valide et un passeport. Les photocopies ne sont pas acceptées."
+          "content": "Le conducteur principal et tout conducteur additionnel mentionné sur le contrat sont les seuls autorisés à conduire le véhicule. Ils doivent avoir plus de 21 ans et posséder un permis de conduire valide obtenu depuis au moins un an.\n\nPour bénéficier de nos services de transport avec chauffeur, vous devez présenter un permis de conduire valide et un passeport. Les photocopies ne sont pas acceptées."
         },
         {
           "title": "Procédure de réservation",
-          "content": "Réserver une voiture de location avec INVOLOCATION à Marrakech ou partout au Maroc vous permet de louer une voiture et des services optionnels tels que la livraison et la restitution à une date et un lieu spécifiés pour une durée de location convenue.\n\nVous pouvez annuler votre réservation à tout moment jusqu'à 48 heures avant la date de prise en charge prévue en nous informant par e-mail ou WhatsApp."
+          "content": "Réserver un service de transport avec Move Up Automotive au Maroc vous permet de bénéficier d'un chauffeur privé et de services optionnels tels que la livraison et la restitution à une date et un lieu spécifiés pour une durée convenue.\n\nVous pouvez annuler votre réservation à tout moment jusqu'à 24 heures avant la date de prise en charge prévue en nous informant par e-mail ou WhatsApp."
         },
         {
           "title": "Prise en charge et retour du véhicule",
-          "content": "INVOLOCATION livrera et récupérera votre voiture de location à l'aéroport, aux riads, aux hôtels ou à votre résidence gratuitement à Marrakech et avec des frais supplémentaires dans d'autres villes du Maroc.\n\nIl est possible de louer une voiture dans une ville et de la rendre dans une autre."
+          "content": "Move Up Automotive assure la prise en charge et la restitution à l'aéroport, aux hôtels, riads ou à votre résidence dans toutes les villes où nous opérons.\n\nIl est possible d'être pris en charge dans une ville et déposé dans une autre."
         },
         {
           "title": "Véhicule",
-          "content": "La voiture de location est fournie en parfait état de fonctionnement avec tout son équipement et les documents nécessaires pour conduire au Maroc. Vous devez rendre la voiture dans le même état que celui dans lequel elle vous a été donnée. Veuillez inspecter soigneusement la voiture de location et ses documents avant de partir.\n\nIl peut arriver que nous n'ayons pas de véhicule de la catégorie choisie disponible. Dans ce cas, nous essaierons de vous fournir un véhicule de catégorie similaire ou supérieure sans coût supplémentaire."
+          "content": "Le véhicule est fourni en parfait état de fonctionnement avec tout son équipement et les documents nécessaires pour circuler au Maroc. Chaque véhicule de notre flotte est soigneusement inspecté avant chaque départ."
         },
         {
-          "title": "Utilisation du véhicule",
-          "content": "Vous devez utiliser la voiture de location à Marrakech et dans tout le Maroc de manière prudente, conformément à la loi et à des fins légales. Vous ne devez pas participer à des rallyes avec la voiture de location, conduire sur des pistes si le véhicule n'est pas un véhicule tout-terrain, respecter les lois et règlements du Maroc, verrouiller le véhicule et le laisser dans un endroit sûr lorsqu'il n'est pas utilisé, et vous assurer que toutes les fenêtres et les toits ouvrants sont correctement fermés. Si vous remarquez un défaut dans le véhicule, cessez de l'utiliser immédiatement en veillant à votre sécurité et informez-nous immédiatement.\n\nL'utilisation de la voiture de location en dehors du Maroc n'est pas autorisée.\n\nSi vous souhaitez prolonger la location, veuillez nous en informer dès que possible. Faites-le avant la date et l'heure de fin de votre contrat de location, au moins 24 heures à l'avance, et réglez le coût des jours supplémentaires de location à votre retour, tel que fixé par INVOLOCATION.\n\nLe locataire est responsable du véhicule loué et de ses documents pendant toute la période de location. Le locataire est responsable des frais occasionnés par la perte de documents, d'accessoires ou de dommages au véhicule constatés en son absence."
+          "title": "Utilisation du service",
+          "content": "Vous devez utiliser le service de transport conformément aux lois et règlements du Maroc. Le chauffeur mis à disposition est un professionnel qualifié qui respecte le code de la route et les règles de sécurité.\n\nL'utilisation du véhicule en dehors du Maroc n'est pas autorisée.\n\nSi vous souhaitez prolonger la durée de votre service, veuillez nous en informer dès que possible, au moins 24 heures à l'avance."
         },
         {
           "title": "Comportement inacceptable",
-          "content": "L'agence de location de voitures INVOLOCATION peut refuser de vous louer une voiture si vous manifestez un comportement discourtois ou inacceptable, comme conduire sous l'influence de l'alcool ou des drogues, ou se comporter de manière impolie envers un représentant de l'agence."
+          "content": "Move Up Automotive peut refuser de vous fournir un service si vous manifestez un comportement discourtois ou inacceptable, comme conduire sous l'influence de l'alcool ou des drogues, ou vous comporter de manière impolie envers un chauffeur ou un représentant de l'agence."
         },
         {
           "title": "Méthodes de paiement",
-          "content": "Nous acceptons les cartes de crédit Visa et MasterCard. Vous pouvez également payer la location de la voiture en espèces ou par chèque émis par une banque marocaine."
+          "content": "Nous acceptons les cartes de crédit Visa et MasterCard. Vous pouvez également payer par virement bancaire ou en espèces."
         },
         {
           "title": "Prépaiements et dépôts de garantie",
-          "content": "Lors de la livraison de la voiture, l'agence de location effectuera une préautorisation en tant que dépôt de garantie, qui représente également le montant de la franchise. Votre carte de paiement émise à votre nom et avec des fonds disponibles suffisants sera utilisée à cet effet. Exceptionnellement, INVOLOCATION peut accepter l'utilisation d'une carte de paiement appartenant à un membre de votre famille."
+          "content": "Un prépaiement peut être demandé pour confirmer certaines réservations. Le montant vous sera communiqué lors de la confirmation de votre service."
         },
         {
-          "title": "Accidents, vols et dommages",
-          "content": "En cas d'accident ou de dommage au véhicule de location, même s'il n'y a pas de tiers impliqué, vous devez immédiatement notifier la police et INVOLOCATION location de voitures à Marrakech dans les 48 heures.\n\nSi vous êtes responsable du vol ou des dommages causés au véhicule, vous devez payer le montant de la franchise indiqué dans le contrat de location. Votre franchise ne sera pas appliquée si vous pouvez prouver que les dommages, le vol ou la perte ne sont pas dus à votre faute, violation délibérée, fraude ou négligence grave. Vous devez nous fournir un formulaire de constat amiable rempli, y compris les détails des autres parties impliquées, dans les 48 heures suivant l'accident. Vous ne serez pas tenu responsable de toute perte ou dommage attribuable à notre défaut d'entretien du véhicule.\n\nPour les dommages mineurs à l'un de nos véhicules de location, nous ne vous facturerons rien. Exemples de dommages mineurs :\n\n- Petite bosse\n- Petite rayure\n- Taches sur les sièges"
+          "title": "Accidents et dommages",
+          "content": "En cas d'accident ou de dommage au véhicule, même s'il n'y a pas de tiers impliqué, vous devez immédiatement notifier la police et Move Up Automotive dans les 48 heures.\n\nPour les dommages mineurs constatés, aucune facturation supplémentaire ne sera appliquée."
         },
         {
-          "title": "Assurance et franchise",
-          "content": "Les voitures de location INVOLOCATION sont entièrement assurées avec un montant de franchise en fonction du type de véhicule :\n\n- 500 euros pour les voitures compactes\n- 1 000 euros pour les voitures intermédiaires et familiales\n- 2 000 euros pour les SUV\n- 2 500 euros pour les véhicules 4x4"
+          "title": "Assurance",
+          "content": "Tous nos véhicules sont entièrement assurés conformément à la réglementation marocaine."
         }
       ]
     },
     "privacy": {
-      "title": "Politique de confidentialité - YACOUT RENT CAR",
-      "updated": "Dernière mise à jour le 26 juillet 2024",
-      "intro": "Cet avis de confidentialité pour INVOLOCATION ('nous', 'notre' ou 'nos') décrit comment et pourquoi nous pourrions collecter, stocker, utiliser et/ou partager vos informations lorsque vous utilisez nos services, par exemple lorsque vous visitez notre site web à https://yacout-tours.com ou tout autre site web de notre société qui renvoie à cet avis de confidentialité.",
+      "title": "Politique de confidentialité - MOVE UP AUTOMOTIVE",
+      "updated": "Dernière mise à jour le 1er juin 2026",
+      "intro": "Cet avis de confidentialité pour MOVE UP AUTOMOTIVE ('nous', 'notre' ou 'nos') décrit comment et pourquoi nous pourrions collecter, stocker, utiliser et/ou partager vos informations lorsque vous utilisez nos services, par exemple lorsque vous visitez notre site web à https://moveup-automotive.ma ou tout autre site web de notre société qui renvoie à cet avis de confidentialité.",
       "sections": [
         {
           "title": "Résumé des points clés",
@@ -229,7 +234,7 @@
         },
         {
           "title": "1. Quelles informations collectons-nous ?",
-          "content": "Informations personnelles que vous nous divulguez : nous collectons les informations personnelles que vous nous fournissez volontairement lorsque vous demandez des informations sur nous, nos produits ou nos services, lorsque vous participez à des activités sur les services, ou lorsque vous nous contactez.\n\nLes informations personnelles que nous collectons peuvent inclure :\n- noms\n- numéros de téléphone\n- adresses e-mail\n- adresses de facturation\n- numéros de carte de débit/crédit\n\nInformations sensibles : nous ne traitons pas d'informations sensibles.\n\nDonnées de paiement : nous pouvons collecter les données nécessaires au traitement de votre paiement. Toutes les données de paiement sont traitées et stockées par CMI.\n\nInformations collectées automatiquement : certaines informations, telles que votre adresse IP et les caractéristiques de votre navigateur et de votre appareil, sont collectées automatiquement lorsque vous visitez nos services."
+          "content": "Informations personnelles que vous nous divulguez : nous collectons les informations personnelles que vous nous fournissez volontairement lorsque vous demandez des informations sur nous, nos produits ou nos services, lorsque vous participez à des activités sur les services, ou lorsque vous nous contactez.\n\nLes informations personnelles que nous collectons peuvent inclure :\n- noms\n- numéros de téléphone\n- adresses e-mail\n- adresses de facturation\n\nInformations sensibles : nous ne traitons pas d'informations sensibles.\n\nInformations collectées automatiquement : certaines informations, telles que votre adresse IP et les caractéristiques de votre navigateur et de votre appareil, sont collectées automatiquement lorsque vous visitez nos services."
         },
         {
           "title": "2. Comment traitons-nous vos informations ?",
@@ -237,11 +242,11 @@
         },
         {
           "title": "3. Quand et avec qui partageons-nous vos informations personnelles ?",
-          "content": "Nous pouvons partager des informations dans des situations spécifiques décrites dans cette section et/ou avec certains tiers. Nous pourrions avoir besoin de partager vos informations personnelles lors de transferts d'entreprise ou lorsque nous utilisons les API Google Maps Platform."
+          "content": "Nous pouvons partager des informations dans des situations spécifiques décrites dans cette section et/ou avec certains tiers."
         },
         {
           "title": "4. Utilisons-nous des cookies et d'autres technologies de suivi ?",
-          "content": "Nous pouvons utiliser des cookies et d'autres technologies de suivi pour collecter et stocker vos informations. Nous permettons également à des tiers et à des prestataires de services d'utiliser des technologies de suivi en ligne sur nos services pour l'analyse et la publicité. Nous pouvons partager vos informations avec Google Analytics pour suivre et analyser l'utilisation des services."
+          "content": "Nous pouvons utiliser des cookies et d'autres technologies de suivi pour collecter et stocker vos informations. Nous permettons également à des tiers et à des prestataires de services d'utiliser des technologies de suivi en ligne sur nos services pour l'analyse et la publicité."
         },
         {
           "title": "5. Combien de temps conservons-nous vos informations ?",
@@ -253,27 +258,15 @@
         },
         {
           "title": "7. Collectons-nous des informations chez des mineurs ?",
-          "content": "Nous ne collectons ni ne commercialisons sciemment des données auprès des enfants de moins de 18 ans. Si nous découvrons que des informations personnelles d'utilisateurs de moins de 18 ans ont été collectées, nous prendrons des mesures raisonnables pour les supprimer rapidement."
+          "content": "Nous ne collectons ni ne commercialisons sciemment des données auprès des enfants de moins de 18 ans."
         },
         {
           "title": "8. Quels sont vos droits en matière de confidentialité ?",
-          "content": "Vous pouvez consulter, modifier ou supprimer votre compte à tout moment, selon votre pays, province ou État de résidence. Vous avez le droit de retirer votre consentement à tout moment en nous contactant. Pour les cookies, la plupart des navigateurs les acceptent par défaut, mais vous pouvez généralement les supprimer ou les refuser."
+          "content": "Vous pouvez consulter, modifier ou supprimer votre compte à tout moment, selon votre pays, province ou État de résidence. Vous avez le droit de retirer votre consentement à tout moment en nous contactant."
         },
         {
-          "title": "9. Contrôles pour les fonctions Ne pas suivre",
-          "content": "À ce stade, aucun standard technologique uniforme pour la reconnaissance et la mise en œuvre des signaux DNT n'a été finalisé. En conséquence, nous ne répondons actuellement pas aux signaux DNT des navigateurs ou à tout autre mécanisme qui communique automatiquement votre choix de ne pas être suivi en ligne."
-        },
-        {
-          "title": "10. Le présent avis est-il mis à jour ?",
-          "content": "Oui, nous mettrons à jour cet avis si nécessaire pour rester en conformité avec les lois en vigueur. La version mise à jour sera indiquée par une date de mise à jour en haut de cet avis de confidentialité."
-        },
-        {
-          "title": "11. Comment pouvez-vous nous contacter au sujet de cet avis ?",
-          "content": "Si vous avez des questions ou des commentaires sur le présent avis, vous pouvez nous contacter par courrier à l'adresse suivante : INVOLOCATION, 100 Rue Mohammed el Beqal, Marrakech 40000, Maroc — yacout.tours@gmail.com"
-        },
-        {
-          "title": "12. Comment pouvez-vous consulter, mettre à jour ou supprimer les données que nous recueillons auprès de vous ?",
-          "content": "Vous pouvez avoir le droit de demander l'accès aux informations personnelles que nous collectons auprès de vous, des détails sur la manière dont nous les avons traitées, de corriger les inexactitudes ou de supprimer vos informations personnelles. Pour demander la révision, la mise à jour ou la suppression de vos informations personnelles, veuillez nous contacter à yacout.tours@gmail.com."
+          "title": "9. Comment pouvez-vous nous contacter au sujet de cet avis ?",
+          "content": "Si vous avez des questions ou des commentaires sur le présent avis, vous pouvez nous contacter par courrier à l'adresse suivante : MOVE UP AUTOMOTIVE, Casablanca, Maroc — contact@moveup-automotive.ma"
         }
       ]
     }

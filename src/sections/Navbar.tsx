@@ -73,8 +73,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3 shrink-0">
-            <img src={img('/logo.png')} alt="INVOLOCATION" className="h-28 w-auto" />
+          <a href="#" className="flex items-center gap-3 shrink-0 h-full">
+            <img src={img('/logo.png')} alt="INVOLOCATION" className="h-full w-auto object-contain py-2" />
           </a>
 
           {/* Desktop Nav Links */}
@@ -109,7 +109,7 @@ export default function Navbar() {
               </div>
               <div className="leading-tight">
                 <p className="text-[11px] text-remons-gray font-inter">{t('navbar.callUs')}</p>
-                <p className="text-[15px] font-poppins font-semibold text-remons-dark">+212 6 61 34 14 07</p>
+                <p className="text-[15px] font-poppins font-semibold text-remons-dark">+212 661 175 193</p>
               </div>
             </div>
 

@@ -58,6 +58,9 @@ CREATE TABLE reservations (
   daily_rate_eur   NUMERIC NOT NULL,
   rental_total_eur NUMERIC NOT NULL,
   total_eur        NUMERIC NOT NULL,
+  chauffeur_enabled BOOLEAN DEFAULT false,
+  chauffeur_type    TEXT DEFAULT NULL,
+  chauffeur_price   NUMERIC DEFAULT NULL,
   status           TEXT DEFAULT 'new' CHECK (status IN ('new','contacted','confirmed','cancelled')),
   created_at       TIMESTAMPTZ DEFAULT NOW(),
   updated_at       TIMESTAMPTZ DEFAULT NOW()
@@ -92,6 +95,9 @@ CREATE POLICY "reservations_select_admin" ON reservations FOR SELECT USING (
   auth.role() = 'authenticated' AND EXISTS (SELECT 1 FROM admin_profiles WHERE id = auth.uid())
 );
 CREATE POLICY "reservations_update_admin" ON reservations FOR UPDATE USING (
+  auth.role() = 'authenticated' AND EXISTS (SELECT 1 FROM admin_profiles WHERE id = auth.uid())
+);
+CREATE POLICY "reservations_delete_admin" ON reservations FOR DELETE USING (
   auth.role() = 'authenticated' AND EXISTS (SELECT 1 FROM admin_profiles WHERE id = auth.uid())
 );
 ```

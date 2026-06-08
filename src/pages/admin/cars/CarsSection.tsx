@@ -312,7 +312,7 @@ export default function CarsSection() {
             {editingCar ? 'Modifier la voiture' : 'Nouvelle voiture'}
           </h2>
           {errorMsg && (
-            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-600 font-inter">
+            <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-remons-primary font-inter">
               {errorMsg}
             </div>
           )}
@@ -367,7 +367,7 @@ export default function CarsSection() {
                   <td className="py-3 px-4 text-center text-remons-gray">{car.fuel}</td>
                   <td className="py-3 px-4 text-center">
                     <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
-                      car.active ? 'bg-green-50 text-green-600' : 'bg-red-50 text-red-600'
+                      car.active ? 'bg-green-50 text-green-600' : 'bg-remons-primary/10 text-remons-primary'
                     }`}>
                       {car.active ? 'Oui' : 'Non'}
                     </span>

@@ -77,7 +77,7 @@ export default function AdminLayout() {
         <div className="p-3 border-t border-remons-border">
           <button
             onClick={() => { handleLogout(); setMobileOpen(false); }}
-            className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-inter font-medium text-remons-gray hover:bg-red-50 hover:text-red-500 transition-colors"
+            className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-inter font-medium text-remons-gray hover:bg-remons-primary/10 hover:text-remons-primary transition-colors"
           >
             <LogOut size={18} />
             <span>Déconnexion</span>
@@ -122,7 +122,7 @@ export default function AdminLayout() {
         <div className="p-3 border-t border-remons-border space-y-1">
           <button
             onClick={handleLogout}
-            className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-inter font-medium text-remons-gray hover:bg-red-50 hover:text-red-500 transition-colors"
+            className="flex items-center gap-3 w-full px-3 py-2.5 rounded-xl text-sm font-inter font-medium text-remons-gray hover:bg-remons-primary/10 hover:text-remons-primary transition-colors"
           >
             <LogOut size={18} />
             {sidebarOpen && <span>Déconnexion</span>}

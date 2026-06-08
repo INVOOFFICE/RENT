@@ -39,6 +39,14 @@ export default function AdminReservations() {
     });
   };
 
+  const handleDelete = async (id: number) => {
+    if (!window.confirm('Supprimer cette réservation définitivement ?')) return;
+    setErrorMsg(null);
+    const { error } = await supabase.from('reservations').delete().eq('id', id);
+    if (error) { setErrorMsg(error.message); return; }
+    await loadReservations();
+  };
+
   return (
     <div>
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-6">
@@ -57,7 +65,7 @@ export default function AdminReservations() {
       </div>
 
       {errorMsg && (
-        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-600 font-inter">
+        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-remons-primary font-inter">
           {errorMsg}
         </div>
       )}
@@ -67,6 +75,7 @@ export default function AdminReservations() {
           reservations={reservations}
           loading={loading}
           onStatusChange={handleStatusChange}
+          onDelete={handleDelete}
           emptyMessage="Aucune réservation trouvée"
         />
       </div>

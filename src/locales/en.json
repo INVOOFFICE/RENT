@@ -1,30 +1,30 @@
 ﻿{
   "common": {
-    "phone": "+212 6 61 34 14 07",
-    "email": "yacout.tours@gmail.com",
-    "address": "100 Rue Mohammed el Beqal, Marrakech 40000, Morocco",
+    "phone": "+212 661 175 193",
+    "email": "contact@moveup-automotive.ma",
+    "address": "Casablanca, Morocco",
     "close": "Close"
   },
   "topbar": {
-    "email": "yacout.tours@gmail.com",
-    "address": "100 Rue Mohammed el Beqal, Marrakech"
+    "email": "contact@moveup-automotive.ma",
+    "address": "Casablanca, Morocco"
   },
   "navbar": {
     "home": "Home",
     "about": "About",
-    "gallery": "Gallery",
-    "cars": "Cars",
+    "gallery": "Reviews",
+    "cars": "Services",
     "contact": "Contact",
-    "findCar": "Find a Car",
-    "brand": "YACOUT",
-    "brandSub": "tours",
+    "findCar": "Book a Transfer",
+    "brand": "MOVE UP",
+    "brandSub": "automotive",
     "callUs": "Call us anytime",
     "search": "Search",
     "menu": "Menu"
   },
   "hero": {
-    "subtitle": "INVOLOCATION Marrakech",
-    "title": "Car Rental Marrakech Airport<br/>and everywhere in Morocco<br/>at the best conditions",
+    "subtitle": "MOVE UP AUTOMOTIVE — CASABLANCA",
+    "title": "Private Chauffeur Service<br/>and Premium Transport in Morocco",
     "pickupLabel": "Pick-up Location",
     "pickupPlaceholder": "Select",
     "startDateLabel": "Pick-up Date",
@@ -43,17 +43,17 @@
     "notSpecifiedF": "Not specified"
   },
   "about": {
-    "subtitle": "INVOLOCATION IN MARRAKECH",
-    "title": "Your car rental agency<br/>in Marrakech",
-    "description": "INVOLOCATION offers the best selection of cars at unbeatable prices for your stay in Marrakech. Enjoy Morocco in total freedom: red city, desert, Ourika Valley, High Atlas, Essaouira, Ouarzazate and custom excursions.",
+    "subtitle": "MOVE UP AUTOMOTIVE",
+    "title": "Tailored Transport<br/>Excellence",
+    "description": "Move Up Automotive is your trusted partner for all your travel needs in Morocco. Specialist in premium transport and private chauffeur services, we offer a tailor-made experience combining comfort, punctuality and professionalism. Whether for an airport transfer, a tour, a business trip or a special event, our fleet of premium vehicles and experienced drivers guarantee an exceptional service.",
     "features": {
       "booking": {
-        "title": "Fast & Easy Booking",
-        "desc": "Book your car in minutes with our simplified process."
+        "title": "Professional Chauffeur",
+        "desc": "Experienced drivers trained in premium service excellence."
       },
       "locations": {
-        "title": "Multiple Pick-up Locations",
-        "desc": "Several convenient locations throughout the city."
+        "title": "All Morocco",
+        "desc": "Casablanca, Marrakech, Rabat, Tangier, Agadir, Fez and beyond."
       }
     },
     "pickupLabel": "Pick-up Location",
@@ -66,7 +66,7 @@
     "airport": "Airport",
     "consultantAlt": "Professional consultant",
     "bookingTitle": "*New Reservation*",
-    "carField": "*Car:* ",
+    "carField": "*Vehicle:* ",
     "priceField": "*Price:* ",
     "nameField": "*Name:* ",
     "emailField": "*Email:* ",
@@ -80,9 +80,9 @@
     "submitErrorMessage": "Error during submission to Google Sheet."
   },
   "cars": {
-    "subtitle": "DISCOVER OUR NEW VEHICLES",
-    "title": "Cars We Offer<br/>For Rent",
-    "error": "Unable to load cars at the moment.",
+    "subtitle": "DISCOVER OUR SERVICES",
+    "title": "Our Vehicles<br/>At Your Service",
+    "error": "Unable to load data at the moment.",
     "modal": {
       "close": "Close",
       "title": "Book",
@@ -95,11 +95,11 @@
       "startDate": "Start Date",
       "endDate": "Return Date",
       "location": "Pick-up / Delivery Location",
-      "selectedCar": "Selected Car",
+      "selectedCar": "Selected Vehicle",
       "submit": "Send via WhatsApp"
     },
     "bookingTitle": "*New Reservation*",
-    "carField": "*Car:* ",
+    "carField": "*Vehicle:* ",
     "priceField": "*Price:* ",
     "nameField": "*Name:* ",
     "emailField": "*Email:* ",
@@ -113,57 +113,62 @@
     "submitErrorMessage": "Error during submission to Google Sheet.",
     "bookNow": "Book Now",
     "seats": "Seats",
-    "doors": "Doors"
+    "doors": "Doors",
+    "chauffeurOption": "Add a chauffeur",
+    "chauffeurHourly": "Hourly",
+    "chauffeurHalfDay": "Half day (4h)",
+    "chauffeurFullDay": "Full day (8h)",
+    "chauffeur24h": "24h"
   },
   "gallery": {
-    "title": "Reliable &amp; Trustworthy<br/>Car Rental",
-    "alt": "Gallery"
+    "title": "What Our Clients Say",
+    "alt": "Client reviews"
   },
   "features": {
     "express": {
-      "title": "Express Booking",
-      "desc": "Book in 2 clicks, pick up your vehicle immediately."
+      "title": "Easy Booking",
+      "desc": "Book your chauffeur in a few clicks, we take care of the rest."
     },
     "insurance": {
-      "title": "Insurance Included",
-      "desc": "All our vehicles are covered by comprehensive insurance."
+      "title": "Safety & Trust",
+      "desc": "Premium vehicles, rigorous maintenance and qualified drivers for your peace of mind."
     },
     "support": {
       "title": "24/7 Support",
-      "desc": "A team available anytime to assist you."
+      "desc": "A dedicated team available anytime to meet your needs."
     }
   },
   "testimonials": {
-    "testimonial1": "Thanks to their excellent service, competitive prices, and customer support. It's truly refreshing to receive such personalized attention.",
-    "testimonial2": "Thanks to their excellent service, competitive prices, and customer support. It's truly refreshing to receive such personalized attention.",
-    "testimonial3": "Thanks to their excellent service, competitive prices, and customer support. It's truly refreshing to receive such personalized attention.",
+    "testimonial1": "Flawless service! Punctual driver, luxurious vehicle and perfect driving. An experience worthy of the highest international standards.",
+    "testimonial2": "I used Move Up Automotive for my business trips in Casablanca. Remarkable professionalism, I highly recommend.",
+    "testimonial3": "Airport transfer organized without any difficulty. Warm welcome, absolute comfort. My new reflex in Morocco.",
     "role": "Client",
-    "prev": "Previous testimonial",
-    "next": "Next testimonial"
+    "prev": "Previous review",
+    "next": "Next review"
   },
   "faq": {
     "sectionTitle": "FREQUENTLY ASKED QUESTIONS",
-    "sectionHeading": "Have questions<br/>about car rental ?",
+    "sectionHeading": "Have questions<br/>about our services ?",
     "moreQuestions": "Have other questions ?",
     "contactWhatsApp": "Contact us on WhatsApp",
-    "q1": "How to book a car ?",
-    "a1": "Booking is simple and fast. Choose your vehicle, select your pick-up and return dates, then confirm your reservation online. Our team will contact you to finalize the details.",
-    "q2": "What payment methods are accepted ?",
-    "a2": "We accept bank cards (Visa, Mastercard), bank transfers, and cash payments upon vehicle pick-up.",
+    "q1": "How to book a chauffeur ?",
+    "a1": "Booking is simple and fast. Choose your service (airport transfer, tour, business transport), select your dates and locations, then confirm your reservation. Our team will contact you to finalize the details of your pick-up.",
+    "q2": "What types of vehicles do you offer ?",
+    "a2": "Our premium fleet includes the Skoda Superb, Skoda Octavia and Mercedes Vito. Each vehicle is carefully maintained and equipped for your optimal comfort.",
     "q3": "Can I cancel my reservation ?",
-    "a3": "Yes, you can cancel your reservation up to 24 hours before the pick-up date free of charge. A 50% fee applies for late cancellations.",
-    "q4": "Is there a mileage limit ?",
-    "a4": "Our packages include unlimited mileage on most of our vehicles. Some premium models may have a daily limit, please check the conditions when booking."
+    "a3": "Yes, you can cancel your reservation up to 24 hours before pick-up free of charge. A 50% fee applies for late cancellations.",
+    "q4": "Which cities do you serve ?",
+    "a4": "We cover the main cities of Morocco: Casablanca, Marrakech, Rabat, Tangier, Agadir, Fez and their airports. Additional destinations can be arranged on request."
   },
   "footer": {
-    "tagline": "INVOLOCATION Car Rental Marrakech Airport the car rental agency everywhere in Morocco at the best conditions.",
-    "copyright": "INVOLOCATION",
+    "tagline": "Move Up Automotive — Tailored Transport Excellence in Morocco",
+    "copyright": "2026 Move Up Automotive. All rights reserved.",
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy",
     "backToTop": "Back to top"
   },
   "pwa": {
-    "installTitle": "Install INVOLOCATION",
+    "installTitle": "Install Move Up Automotive",
     "installDesc": "Add to your home screen",
     "install": "Install",
     "close": "Close"
@@ -174,54 +179,54 @@
   },
   "legal": {
     "terms": {
-      "title": "Terms & Conditions - YACOUT RENT CAR",
+      "title": "Terms & Conditions - MOVE UP AUTOMOTIVE",
       "sections": [
         {
           "title": "Age limit, drivers and documents",
-          "content": "The main driver and any additional driver named on the rental agreement are the only people authorized to drive the rental car. They must be over 21 years old and hold a valid driving license issued at least one year ago.\n\nAdding a second driver is free of charge.\n\nTo rent a car, you must present a valid driving license and a passport. Photocopies are not accepted."
+          "content": "The main driver and any additional driver named on the contract are the only people authorized to drive the vehicle. They must be over 21 years old and hold a valid driving license issued at least one year ago.\n\nTo benefit from our chauffeur services, you must present a valid driving license and a passport. Photocopies are not accepted."
         },
         {
           "title": "Booking procedure",
-          "content": "Booking a rental car with INVOLOCATION in Marrakech or anywhere in Morocco allows you to rent a car and optional services such as delivery and return at a specified date and location for an agreed rental period.\n\nYou may cancel your booking at any time up to 48 hours before the scheduled pick-up date by informing us by email or WhatsApp."
+          "content": "Booking a transport service with Move Up Automotive in Morocco allows you to benefit from a private chauffeur and optional services such as pick-up and drop-off at a specified date and location for an agreed period.\n\nYou may cancel your booking at any time up to 24 hours before the scheduled pick-up date by informing us by email or WhatsApp."
         },
         {
           "title": "Vehicle pick-up and return",
-          "content": "INVOLOCATION will deliver and collect your rental car at the airport, riads, hotels or your residence free of charge in Marrakech and with additional fees in other cities in Morocco.\n\nIt is possible to rent a car in one city and return it in another."
+          "content": "Move Up Automotive provides pick-up and drop-off at airports, hotels, riads or your residence in all cities where we operate.\n\nIt is possible to be picked up in one city and dropped off in another."
         },
         {
           "title": "Vehicle",
-          "content": "The rental car is provided in perfect working condition with all equipment and documents required to drive in Morocco. You must return the car in the same condition as it was given to you. Please inspect the rental car and its documents carefully before leaving.\n\nIf a vehicle in the selected category is not available, we will try to provide a similar or higher category vehicle at no additional cost."
+          "content": "The vehicle is provided in perfect working condition with all equipment and documents required to travel in Morocco. Each vehicle in our fleet is carefully inspected before every departure."
         },
         {
-          "title": "Vehicle use",
-          "content": "You must use the rental car in Marrakech and throughout Morocco carefully, legally and for lawful purposes. You must not participate in rallies with the rental car, drive on tracks unless the vehicle is an off-road vehicle, violate Moroccan laws or regulations, leave the vehicle unlocked or unsafe when not in use, or leave windows and sunroofs open. If you notice a fault in the vehicle, stop using it immediately while ensuring your safety and inform us immediately.\n\nUse of the rental car outside Morocco is not permitted.\n\nIf you wish to extend the rental, please inform us as soon as possible. Do so before the end date and time of your rental agreement, at least 24 hours in advance, and pay the cost of the additional rental days upon return, as set by INVOLOCATION.\n\nThe renter is responsible for the rented vehicle and its documents during the entire rental period. The renter is responsible for costs caused by loss of documents, accessories or damage to the vehicle noticed in their absence."
+          "title": "Service use",
+          "content": "You must use the transport service in accordance with Moroccan laws and regulations. The assigned driver is a qualified professional who respects the highway code and safety rules.\n\nUse of the vehicle outside Morocco is not permitted.\n\nIf you wish to extend your service duration, please inform us as soon as possible, at least 24 hours in advance."
         },
         {
           "title": "Unacceptable behavior",
-          "content": "INVOLOCATION car rental agency may refuse to rent you a car if you show discourteous or unacceptable behavior, such as driving under the influence of alcohol or drugs, or behaving rudely toward an agency representative."
+          "content": "Move Up Automotive may refuse to provide you with a service if you show discourteous or unacceptable behavior, such as driving under the influence of alcohol or drugs, or behaving rudely toward a driver or agency representative."
         },
         {
           "title": "Payment methods",
-          "content": "We accept Visa and MasterCard credit cards. You can also pay for the car rental in cash or by cheque issued by a Moroccan bank."
+          "content": "We accept Visa and MasterCard credit cards. You can also pay by bank transfer or cash."
         },
         {
-          "title": "Prepayments and security deposits",
-          "content": "When the car is delivered, the rental agency will make a pre-authorization as a security deposit, which also represents the deductible amount. Your payment card issued in your name and with sufficient available funds will be used for this purpose. Exceptionally, INVOLOCATION may accept the use of a payment card belonging to a family member."
+          "title": "Prepayments and deposits",
+          "content": "A prepayment may be required to confirm certain reservations. The amount will be communicated to you upon confirmation of your service."
         },
         {
-          "title": "Accidents, theft and damage",
-          "content": "In the event of an accident or damage to the rental vehicle, even if no third party is involved, you must immediately notify the police and INVOLOCATION car rental in Marrakech within 48 hours.\n\nIf you are responsible for theft or damage to the vehicle, you must pay the deductible amount stated in the rental agreement. Your deductible will not apply if you can prove that the damage, theft or loss was not due to your fault, intentional breach, fraud or gross negligence. You must provide us with a completed accident report form, including details of the other parties involved, within 48 hours of the accident. You will not be held responsible for any loss or damage attributable to our failure to maintain the vehicle.\n\nFor minor damage to one of our rental vehicles, we will not charge you. Examples of minor damage include:\n\n- Small dent\n- Small scratch\n- Seat stains"
+          "title": "Accidents and damage",
+          "content": "In the event of an accident or damage to the vehicle, even if no third party is involved, you must immediately notify the police and Move Up Automotive within 48 hours.\n\nFor minor damage, no additional charges will be applied."
         },
         {
-          "title": "Insurance and deductible",
-          "content": "INVOLOCATION rental cars are fully insured with a deductible amount depending on the vehicle type:\n\n- 500 euros for compact cars\n- 1,000 euros for intermediate and family cars\n- 2,000 euros for SUVs\n- 2,500 euros for 4x4 vehicles"
+          "title": "Insurance",
+          "content": "All our vehicles are fully insured in accordance with Moroccan regulations."
         }
       ]
     },
     "privacy": {
-      "title": "Privacy Policy - YACOUT RENT CAR",
-      "updated": "Last updated on July 26, 2024",
-      "intro": "This privacy notice for INVOLOCATION ('we', 'us' or 'our') describes how and why we may collect, store, use and/or share your information when you use our services, such as when you visit our website at https://yacout-tours.com or any other company website that links to this privacy notice.",
+      "title": "Privacy Policy - MOVE UP AUTOMOTIVE",
+      "updated": "Last updated on June 1, 2026",
+      "intro": "This privacy notice for MOVE UP AUTOMOTIVE ('we', 'us' or 'our') describes how and why we may collect, store, use and/or share your information when you use our services, such as when you visit our website at https://moveup-automotive.ma or any other company website that links to this privacy notice.",
       "sections": [
         {
           "title": "Summary of key points",
@@ -229,7 +234,7 @@
         },
         {
           "title": "1. What information do we collect?",
-          "content": "Personal information you disclose to us: we collect the personal information you voluntarily provide when you express interest in obtaining information about us, our products or services, when you participate in activities on the services, or when you contact us.\n\nThe personal information we collect may include:\n- names\n- phone numbers\n- email addresses\n- billing addresses\n- debit/credit card numbers\n\nSensitive information: we do not process sensitive information.\n\nPayment data: we may collect data necessary to process your payment. All payment data is processed and stored by CMI.\n\nInformation collected automatically: some information, such as your IP address and browser/device characteristics, is collected automatically when you visit our services."
+          "content": "Personal information you disclose to us: we collect the personal information you voluntarily provide when you express interest in obtaining information about us, our products or services, when you participate in activities on the services, or when you contact us.\n\nThe personal information we collect may include:\n- names\n- phone numbers\n- email addresses\n- billing addresses\n\nSensitive information: we do not process sensitive information.\n\nInformation collected automatically: some information, such as your IP address and browser/device characteristics, is collected automatically when you visit our services."
         },
         {
           "title": "2. How do we process your information?",
@@ -237,11 +242,11 @@
         },
         {
           "title": "3. When and with whom do we share your personal information?",
-          "content": "We may share information in specific situations described in this section and/or with certain third parties. We may need to share your personal information during business transfers or when we use Google Maps Platform APIs."
+          "content": "We may share information in specific situations described in this section and/or with certain third parties."
         },
         {
           "title": "4. Do we use cookies and other tracking technologies?",
-          "content": "We may use cookies and other tracking technologies to collect and store your information. We also allow third parties and service providers to use online tracking technologies on our services for analytics and advertising. We may share your information with Google Analytics to track and analyze the use of the services."
+          "content": "We may use cookies and other tracking technologies to collect and store your information. We also allow third parties and service providers to use online tracking technologies on our services for analytics and advertising."
         },
         {
           "title": "5. How long do we keep your information?",
@@ -253,27 +258,15 @@
         },
         {
           "title": "7. Do we collect information from minors?",
-          "content": "We do not knowingly collect or market data from children under 18 years of age. If we learn that personal information from users under 18 has been collected, we will take reasonable measures to delete it promptly."
+          "content": "We do not knowingly collect or market data from children under 18 years of age."
         },
         {
           "title": "8. What are your privacy rights?",
-          "content": "You may review, change or delete your account at any time, depending on your country, province or state of residence. You have the right to withdraw your consent at any time by contacting us. For cookies, most web browsers are set to accept them by default, but you can usually choose to remove or reject them."
+          "content": "You may review, change or delete your account at any time, depending on your country, province or state of residence. You have the right to withdraw your consent at any time by contacting us."
         },
         {
-          "title": "9. Controls for Do Not Track features",
-          "content": "At this stage, no uniform technology standard for recognizing and implementing DNT signals has been finalized. As a result, we do not currently respond to browser DNT signals or any other mechanism that automatically communicates your choice not to be tracked online."
-        },
-        {
-          "title": "10. Is this notice updated?",
-          "content": "Yes, we will update this notice as necessary to remain compliant with applicable laws. The updated version will be indicated by an updated date at the top of this privacy notice."
-        },
-        {
-          "title": "11. How can you contact us about this notice?",
-          "content": "If you have questions or comments about this notice, you can contact us by mail at: INVOLOCATION, 100 Rue Mohammed el Beqal, Marrakech 40000, Morocco — yacout.tours@gmail.com"
-        },
-        {
-          "title": "12. How can you review, update or delete the data we collect from you?",
-          "content": "You may have the right to request access to the personal information we collect from you, details about how we have processed it, correction of inaccuracies, or deletion of your personal information. To request review, update or deletion of your personal information, please contact us at yacout.tours@gmail.com."
+          "title": "9. How can you contact us about this notice?",
+          "content": "If you have questions or comments about this notice, you can contact us by mail at: MOVE UP AUTOMOTIVE, Casablanca, Morocco — contact@moveup-automotive.ma"
         }
       ]
     }

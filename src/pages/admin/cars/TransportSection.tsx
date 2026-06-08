@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import * as XLSX from 'xlsx';
 import { supabase, type TransportPrice } from '@/lib/supabase';
-import { Plus, Edit2, Save, X, Trash2 } from 'lucide-react';
+import { Plus, Edit2, Save, X, Trash2, Download, Upload } from 'lucide-react';
 import { useCurrency, currencies, convertPrice, convertToEUR } from '@/lib/currency';
 
 export default function TransportSection() {
@@ -15,6 +16,73 @@ export default function TransportSection() {
   const [showNew, setShowNew] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const { currency, setCurrency } = useCurrency();
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
+  function handleExport() {
+    const rows = prices.map(p => ({
+      De: p.from_location,
+      Vers: p.to_location,
+      'Prix EUR': p.price_eur,
+    }));
+    const ws = XLSX.utils.json_to_sheet(rows);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Trajets');
+    const cols = [{ wch: 25 }, { wch: 25 }, { wch: 10 }];
+    ws['!cols'] = cols;
+    XLSX.writeFile(wb, 'trajets.xlsx');
+  }
+
+  const PRICE_KEYS = ['Prix EUR', 'Prix', 'Price', 'price_eur', 'Montant', 'Tarif', 'Prix (EUR)', 'price'];
+
+  function detectPriceKey(keys: string[]): string {
+    const lower = keys.map(k => k.toLowerCase().trim());
+    for (const pk of PRICE_KEYS) {
+      const idx = lower.indexOf(pk.toLowerCase());
+      if (idx !== -1) return keys[idx];
+    }
+    const numKey = keys.find(k => {
+      const v = Number(k);
+      if (!isNaN(v) && keys.length <= 3) return true;
+      return false;
+    });
+    return numKey || keys[keys.length - 1];
+  }
+
+  async function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setErrorMsg(null);
+    try {
+      const data = await file.arrayBuffer();
+      const wb = XLSX.read(data, { type: 'array' });
+      const ws = wb.Sheets[wb.SheetNames[0]];
+      const raw = XLSX.utils.sheet_to_json<Record<string, string | number>>(ws);
+      if (raw.length === 0) { setErrorMsg('Le fichier est vide'); return; }
+      const keys = Object.keys(raw[0]);
+      const fromKey = keys.find(k => /^De$/i.test(k.trim())) || keys[0];
+      const toKey = keys.find(k => /^Vers$/i.test(k.trim())) || keys[1];
+      const priceKey = detectPriceKey(keys);
+      let count = 0;
+      for (const row of raw) {
+        const from = String(row[fromKey] ?? '').trim();
+        const to = String(row[toKey] ?? '').trim();
+        if (!from || !to || from === to) continue;
+        const priceEUR = typeof row[priceKey] === 'number' ? row[priceKey] : parseFloat(String(row[priceKey] ?? '0')) || 0;
+        const exists = prices.find(p => p.from_location === from && p.to_location === to);
+        const payload = { from_location: from, to_location: to, price_eur: priceEUR };
+        if (exists) {
+          await supabase.from('transport_prices').update(payload).eq('id', exists.id);
+        } else {
+          await supabase.from('transport_prices').insert(payload);
+        }
+        count++;
+      }
+      await loadData();
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : 'Erreur lors de l\'import');
+    }
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  }
 
   async function loadData() {
     const [pricesRes, settingsRes] = await Promise.all([
@@ -85,17 +153,40 @@ export default function TransportSection() {
         <p className="text-sm text-remons-gray font-inter">
           {prices.length} trajets configurés sur {locations.length} villes différentes.
         </p>
-        <button
-          onClick={() => setShowNew(!showNew)}
-          className="flex items-center gap-2 bg-remons-primary text-white font-poppins text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-remons-primary-dark transition-colors self-start sm:self-auto"
-        >
-          <Plus size={16} />
-          {showNew ? 'Annuler' : 'Ajouter un trajet'}
-        </button>
+        <div className="flex items-center gap-2">
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept=".xlsx,.xls"
+            onChange={handleImport}
+            className="hidden"
+          />
+          <button
+            onClick={() => fileInputRef.current?.click()}
+            className="flex items-center gap-2 border border-remons-border text-remons-dark font-poppins text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-remons-light-gray transition-colors"
+          >
+            <Upload size={16} />
+            Importer XLSX
+          </button>
+          <button
+            onClick={handleExport}
+            className="flex items-center gap-2 border border-remons-border text-remons-dark font-poppins text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-remons-light-gray transition-colors"
+          >
+            <Download size={16} />
+            Exporter XLSX
+          </button>
+          <button
+            onClick={() => setShowNew(!showNew)}
+            className="flex items-center gap-2 bg-remons-primary text-white font-poppins text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-remons-primary-dark transition-colors"
+          >
+            <Plus size={16} />
+            {showNew ? 'Annuler' : 'Ajouter un trajet'}
+          </button>
+        </div>
       </div>
 
       {errorMsg && (
-        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-600 font-inter">
+        <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-remons-primary font-inter">
           {errorMsg}
         </div>
       )}

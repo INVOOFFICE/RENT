@@ -68,7 +68,7 @@ export default function AdminLogin() {
           </div>
 
           {error && (
-            <p className="text-sm font-inter text-red-500 text-center">{error}</p>
+            <p className="text-sm font-inter text-remons-primary text-center">{error}</p>
           )}
 
           <button

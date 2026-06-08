@@ -204,13 +204,13 @@ export default function ConfigSection() {
               {testStatus === 'sending' ? 'Envoi...' : 'Test SMTP'}
             </button>
             {testStatus === 'ok' && <span className="text-sm text-green-600 font-inter">✓</span>}
-            {testStatus === 'error' && <span className="text-sm text-red-600 font-inter">✗</span>}
+            {testStatus === 'error' && <span className="text-sm text-remons-primary font-inter">✗</span>}
           </div>
         </div>
       </div>
 
       {errorMsg && (
-        <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-red-600 font-inter">{errorMsg}</div>
+        <div className="p-3 bg-red-50 border border-red-200 rounded-xl text-sm text-remons-primary font-inter">{errorMsg}</div>
       )}
 
       {/* Save button */}

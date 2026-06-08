@@ -12,7 +12,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { useCurrency, convertPrice } from '@/lib/currency';
-import { supabase, type TransportPrice } from '@/lib/supabase';
+import { supabase, type TransportPrice, type DriverSettings } from '@/lib/supabase';
 import { sendReservationEmail } from '@/lib/email';
 
 interface Car {
@@ -109,10 +109,10 @@ function buildTransportMap(data: TransportPrice[]): Record<string, number> {
   return map;
 }
 
-const PHONE = '212630230803';
+const PHONE = '212661175193';
 
   function BookingModal({
-  car, tariffs, transportPrices, locations, seasonStart, seasonEnd,
+  car, tariffs, transportPrices, locations, seasonStart, seasonEnd, driverSettings,
   onClose,
   }: {
     car: Car;
@@ -121,6 +121,7 @@ const PHONE = '212630230803';
     locations: string[];
     seasonStart: string;
     seasonEnd: string;
+    driverSettings: DriverSettings | null;
     onClose: () => void;
   }) {
   const { t } = useTranslation();
@@ -136,6 +137,8 @@ const PHONE = '212630230803';
     deliveryLocation: '',
   });
   const [submitMessage, setSubmitMessage] = useState<string | null>(null);
+  const [chauffeurEnabled, setChauffeurEnabled] = useState(false);
+  const [chauffeurType, setChauffeurType] = useState<'hourly' | 'half_day' | 'full_day' | '24h'>('hourly');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -146,8 +149,17 @@ const PHONE = '212630230803';
   const bracket = getBracket(car.category, days, tariffs);
   const dailyRateEUR = bracket ? (season === 'haute' ? bracket.haute : bracket.normal) : 0;
   const transportEUR = transportPrices[form.deliveryLocation] ?? 0;
+  const chauffeurEnabledActual = chauffeurEnabled && driverSettings?.enabled;
+  const CHAUFFEUR_DAILY_RATES = {
+    hourly: 10,
+    half_day: 25,
+    full_day: 40,
+    '24h': 80,
+  } as const;
+  const chauffeurDailyRate = chauffeurEnabledActual ? CHAUFFEUR_DAILY_RATES[chauffeurType] : 0;
+  const chauffeurEUR = chauffeurDailyRate * days;
   const rentalTotalEUR = dailyRateEUR * days;
-  const totalEUR = rentalTotalEUR + transportEUR;
+  const totalEUR = rentalTotalEUR + transportEUR + chauffeurEUR;
   const symbol = currency.symbol;
   const dailyRate = convertPrice(dailyRateEUR, currency.code);
   const transportPrice = convertPrice(transportEUR, currency.code);
@@ -158,28 +170,26 @@ const PHONE = '212630230803';
     e.preventDefault();
     setSubmitMessage(null);
 
-    const seasonLabel = season === 'haute' ? 'Haute Saison' : 'Saison Normale';
-    const durationLabel = bracket ? bracket.label : '-';
-    const transportDetail = transportPrice > 0
-      ? `Livraison : ${form.deliveryLocation} (${transportPrice} ${symbol})`
-      : null;
+    const chauffeurLabel = ({ hourly: t('cars.chauffeurHourly'), half_day: t('cars.chauffeurHalfDay'), full_day: t('cars.chauffeurFullDay'), '24h': t('cars.chauffeur24h') })[chauffeurType];
     const message = [
-      t('cars.bookingTitle'),
+      'Nouvelle réservation',
       ``,
-      t('cars.carField') + car.name,
-      `Catégorie : ${car.category}`,
-      `Saison : ${seasonLabel}`,
-      `Durée : ${days} jours (${durationLabel})`,
-      `Location : ${dailyRate} ${symbol} × ${days} j = ${rentalTotal} ${symbol}`,
-      ...(transportDetail ? [transportDetail] : []),
-      `*Total : ${total} ${symbol}*`,
+      `Véhicule : ${car.name}`,
+      `Nom : ${form.name}`,
+      `Téléphone : ${form.phone}`,
+      ``,
+      `Date départ : ${form.startDate}`,
+      `Date retour : ${form.endDate}`,
+      ``,
       `Prise en charge : ${form.pickupLocation || '-'}`,
       `Livraison : ${form.deliveryLocation || '-'}`,
-      t('cars.nameField') + form.name,
-      t('cars.emailField') + form.email,
-      t('cars.phoneField') + form.phone,
-      t('cars.startField') + form.startDate,
-      t('cars.endField') + form.endDate,
+      ``,
+      `Chauffeur : ${chauffeurEnabledActual ? 'Oui' : 'Non'}`,
+      ...(chauffeurEnabledActual ? [`Type : ${chauffeurLabel}`] : []),
+      ``,
+      `Prix location : ${rentalTotal} ${symbol}`,
+      ...(chauffeurEnabledActual ? [`Prix chauffeur : ${convertPrice(chauffeurEUR, currency.code)} ${symbol}`] : []),
+      `Total : ${total} ${symbol}`,
     ].join('\n');
 
     const url = `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
@@ -198,6 +208,9 @@ const PHONE = '212630230803';
         end_date: form.endDate,
         location: `${form.pickupLocation} → ${form.deliveryLocation}`,
         transport_eur: transportEUR,
+        chauffeur_enabled: chauffeurEnabledActual,
+        chauffeur_type: chauffeurEnabledActual ? chauffeurType : null,
+        chauffeur_price: chauffeurEnabledActual ? chauffeurEUR : null,
         season: season,
         duration_days: days,
         daily_rate_eur: dailyRateEUR,
@@ -343,25 +356,64 @@ const PHONE = '212630230803';
             </div>
           </div>
 
+          {driverSettings?.enabled && (
+            <div className="bg-gradient-to-br from-remons-dark/5 to-remons-primary/5 rounded-xl p-4 space-y-3 border border-remons-primary/10 shadow-sm">
+              <label className="flex items-center justify-between cursor-pointer">
+                <span className="text-sm font-inter font-medium text-remons-dark flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-remons-primary" />
+                  {t('cars.chauffeurOption')}
+                </span>
+                <button
+                  type="button"
+                  role="switch"
+                  aria-checked={chauffeurEnabled}
+                  onClick={() => setChauffeurEnabled(!chauffeurEnabled)}
+                  className={`relative inline-flex h-6 w-11 shrink-0 items-center rounded-full transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-remons-primary/50 ${
+                    chauffeurEnabled ? 'bg-remons-primary' : 'bg-remons-border'
+                  }`}
+                >
+                  <span
+                    className={`inline-block h-5 w-5 transform rounded-full bg-white shadow-sm transition-transform duration-200 ${
+                      chauffeurEnabled ? 'translate-x-[22px]' : 'translate-x-[2px]'
+                    }`}
+                  />
+                </button>
+              </label>
+              {chauffeurEnabled && (
+                <div className="grid grid-cols-2 gap-2">
+                  {([
+                    { value: 'hourly', label: t('cars.chauffeurHourly') },
+                    { value: 'half_day', label: t('cars.chauffeurHalfDay') },
+                    { value: 'full_day', label: t('cars.chauffeurFullDay') },
+                    { value: '24h', label: t('cars.chauffeur24h') },
+                  ] as const).map((opt) => (
+                    <button
+                      type="button"
+                      key={opt.value}
+                      onClick={() => setChauffeurType(opt.value)}
+                      className={`flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl cursor-pointer border-2 transition-all duration-200 text-sm font-inter font-medium ${
+                        chauffeurType === opt.value
+                          ? 'border-remons-primary bg-remons-primary text-white shadow-button'
+                          : 'border-remons-border bg-white text-remons-dark hover:border-remons-primary/40 hover:bg-remons-primary/5'
+                      }`}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
           <div className="bg-remons-light-gray rounded-xl p-4 space-y-1.5">
             <p className="text-xs font-inter font-semibold text-remons-dark uppercase tracking-wider">
               Détail du prix
             </p>
-            <div className="flex justify-between text-sm font-inter text-remons-dark">
-              <span>Catégorie</span>
-              <span className="font-medium">{car.category}</span>
-            </div>
             {form.startDate && form.endDate && days > 0 && (
-              <>
-                <div className="flex justify-between text-sm font-inter text-remons-dark">
-                  <span>Saison</span>
-                  <span className="font-medium">{season === 'haute' ? 'Haute Saison' : 'Saison Normale'}</span>
-                </div>
-                <div className="flex justify-between text-sm font-inter text-remons-dark">
-                  <span>Durée</span>
-                  <span className="font-medium">{days} jours ({bracket?.label})</span>
-                </div>
-              </>
+              <div className="flex justify-between text-sm font-inter text-remons-dark">
+                <span>Durée</span>
+                <span className="font-medium">{days} jours ({bracket?.label})</span>
+              </div>
             )}
             {dailyRateEUR > 0 && days > 0 && (
               <div className="flex justify-between text-sm font-inter text-remons-dark">
@@ -381,7 +433,13 @@ const PHONE = '212630230803';
                 <span className="font-medium">Gratuit</span>
               </div>
             )}
-            {(dailyRateEUR > 0 && days > 0) || (transportPrice > 0) ? (
+            {chauffeurEnabledActual && chauffeurEUR > 0 && (
+              <div className="flex justify-between text-sm font-inter text-remons-dark">
+                <span>Chauffeur ({({ hourly: t('cars.chauffeurHourly'), half_day: t('cars.chauffeurHalfDay'), full_day: t('cars.chauffeurFullDay'), '24h': t('cars.chauffeur24h') })[chauffeurType]} × {days} j)</span>
+                <span className="font-medium">{convertPrice(chauffeurEUR, currency.code)} {symbol}</span>
+              </div>
+            )}
+            {(dailyRateEUR > 0 && days > 0) || (transportPrice > 0) || (chauffeurEUR > 0) ? (
               <div className="border-t border-remons-border pt-1.5 mt-1.5 flex justify-between text-sm font-inter font-bold text-remons-primary">
                 <span>Total</span>
                 <span>{total} {symbol}</span>
@@ -434,6 +492,7 @@ export default function CarRentals() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [selectedCar, setSelectedCar] = useState<Car | null>(null);
+  const [driverSettings, setDriverSettings] = useState<DriverSettings | null>(null);
 
   function getCurrentSeason(): 'normal' | 'haute' {
     const today = new Date().toISOString().split('T')[0];
@@ -445,11 +504,12 @@ export default function CarRentals() {
   useEffect(() => {
     async function loadData() {
       try {
-        const [carsResult, tariffsResult, transportResult, settingsResult] = await Promise.all([
+        const [carsResult, tariffsResult, transportResult, settingsResult, driversResult] = await Promise.all([
           supabase.from('cars').select('*').eq('active', true).order('id'),
           supabase.from('tariffs').select('*'),
           supabase.from('transport_prices').select('*'),
           supabase.from('settings').select('*'),
+          supabase.from('drivers_settings').select('*').maybeSingle(),
         ]);
 
         if (carsResult.error) throw new Error(carsResult.error.message);
@@ -475,6 +535,9 @@ export default function CarRentals() {
           if (start) setSeasonStart(start.value);
           if (end) setSeasonEnd(end.value);
         }
+        if (!driversResult.error && driversResult.data) {
+          setDriverSettings(driversResult.data);
+        }
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to load data');
       } finally {
@@ -495,7 +558,7 @@ export default function CarRentals() {
     return (
       <section id="cars" className="bg-white py-[100px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-red-500 text-lg">{t('cars.error')}</p>
+          <p className="text-remons-primary text-lg">{t('cars.error')}</p>
         </div>
       </section>
     );
@@ -559,7 +622,7 @@ export default function CarRentals() {
                     </span>
                     <span className="text-remons-gray text-sm font-inter">/ {car.duration}</span>
                     {currentSeason === 'haute' && (
-                      <span className="text-[10px] font-inter font-semibold text-red-500 bg-red-50 px-1.5 py-0.5 rounded-full">
+                      <span className="text-[10px] font-inter font-semibold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded-full">
                         Haute Saison
                       </span>
                     )}
@@ -608,6 +671,7 @@ export default function CarRentals() {
           locations={locations}
           seasonStart={seasonStart}
           seasonEnd={seasonEnd}
+          driverSettings={driverSettings}
           onClose={() => setSelectedCar(null)}
         />
       )}

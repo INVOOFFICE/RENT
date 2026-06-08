@@ -53,7 +53,7 @@ export default function Hero() {
         <source src={img('/Vid.mp4')} type="video/mp4" />
       </video>
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-slate-950/40" />
+      <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(6,8,22,0.85) 0%, rgba(17,24,39,0.75) 100%)' }} />
 
       {/* Diagonal Bands */}
       <div className="absolute inset-0 overflow-hidden">

@@ -53,6 +53,9 @@ export type Reservation = {
   daily_rate_eur: number;
   rental_total_eur: number;
   total_eur: number;
+  chauffeur_enabled: boolean | null;
+  chauffeur_type: string | null;
+  chauffeur_price: number | null;
   status: 'new' | 'contacted' | 'confirmed' | 'cancelled';
   created_at: string;
   updated_at: string;
@@ -76,5 +79,18 @@ export type Franchise = {
   id: number;
   category: CarCategory;
   amount_eur: number;
+  updated_at: string;
+};
+
+export type DriverSettings = {
+  id: string;
+  enabled: boolean;
+  price_per_hour: number;
+  half_day_price: number;
+  full_day_price: number;
+  price_24h: number;
+  airport_extra: number;
+  night_extra: number;
+  created_at: string;
   updated_at: string;
 };
