@@ -187,7 +187,7 @@ const PHONE = '212661175193';
       `Chauffeur : ${chauffeurEnabledActual ? 'Oui' : 'Non'}`,
       ...(chauffeurEnabledActual ? [`Type : ${chauffeurLabel}`] : []),
       ``,
-      `Prix location : ${rentalTotal} ${symbol}`,
+      `Prix véhicule : ${rentalTotal} ${symbol}`,
       ...(chauffeurEnabledActual ? [`Prix chauffeur : ${convertPrice(chauffeurEUR, currency.code)} ${symbol}`] : []),
       `Total : ${total} ${symbol}`,
     ].join('\n');

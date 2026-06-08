@@ -7,13 +7,13 @@ import { VitePWA } from 'vite-plugin-pwa'
 import type { ManifestOptions } from 'vite-plugin-pwa'
 
 const manifest: Partial<ManifestOptions> = {
-  name: "INVOLOCATION - Location de voitures",
-  short_name: "INVOLOCATION",
-  description: "INVOLOCATION Location de Voiture à Marrakech Aéroport et partout au Maroc",
+  name: "Move Up Automotive — Transport privé & Chauffeur",
+  short_name: "Move Up Auto",
+  description: "Move Up Automotive — Transport privé avec chauffeur de luxe au Maroc : Casablanca, Marrakech, Rabat.",
   start_url: "/",
   display: "standalone",
   background_color: "#ffffff",
-  theme_color: "#DC2626",
+  theme_color: "#75123e",
   lang: "fr",
   icons: [
     {

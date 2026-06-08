@@ -76,7 +76,7 @@ function buildReservationEmail(
   };
 
   const label = statusLabels[status] || status;
-  const statusColor = statusColors[status] || '#DC2626';
+  const statusColor = statusColors[status] || '#75123e';
   const statusIcon = statusIcons[status] || '';
 
   const isNew = status === 'new';
@@ -125,11 +125,11 @@ function buildReservationEmail(
     </tr>`);
   if (data.total_eur !== undefined) detailRows.push(`
     <tr>
-      <td style="padding: 14px 20px; background-color: #FEF2F2;">
+      <td style="padding: 14px 20px; background-color: #fdf2f5;">
         <table cellpadding="0" cellspacing="0" style="width: 100%;">
           <tr>
             <td style="font-size: 14px; color: #111827; font-weight: 600;">Total</td>
-            <td style="text-align: right; font-size: 18px; font-weight: 700; color: #DC2626;">${data.total_eur.toFixed(2)} \u20ac</td>
+            <td style="text-align: right; font-size: 18px; font-weight: 700; color: #75123e;">${data.total_eur.toFixed(2)} \u20ac</td>
           </tr>
         </table>
       </td>
@@ -144,7 +144,7 @@ function buildReservationEmail(
   if (data.client_email) clientRows.push(`
     <tr>
       <td style="padding: 4px 0; color: #374151; font-size: 13px;"><strong>Email :</strong></td>
-      <td style="padding: 4px 0 4px 12px; color: #111827; font-size: 13px;"><a href="mailto:${data.client_email}" style="color: #DC2626; text-decoration: none;">${data.client_email}</a></td>
+      <td style="padding: 4px 0 4px 12px; color: #111827; font-size: 13px;"><a href="mailto:${data.client_email}" style="color: #75123e; text-decoration: none;">${data.client_email}</a></td>
     </tr>`);
   if (data.client_phone) clientRows.push(`
     <tr>
@@ -157,9 +157,9 @@ function buildReservationEmail(
       <table align="center" cellpadding="0" cellspacing="0" style="max-width: 560px; width: 100%; margin: 0 auto; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
         <!-- Header -->
         <tr>
-          <td style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%); padding: 36px 32px 28px; text-align: center;">
+            <td style="background: linear-gradient(135deg, #75123e 0%, #8d1a4c 100%); padding: 36px 32px 28px; text-align: center;">
             <h1 style="margin: 0; color: #FFFFFF; font-size: 24px; font-weight: 800; letter-spacing: 1px;">${fromName}</h1>
-            <p style="margin: 6px 0 0; color: rgba(255,255,255,0.8); font-size: 13px; letter-spacing: 0.3px;">Location de v\u00e9hicules \u2022 Marrakech</p>
+            <p style="margin: 6px 0 0; color: rgba(255,255,255,0.8); font-size: 13px; letter-spacing: 0.3px;">Transport priv\u00e9 avec chauffeur \u2022 Maroc</p>
           </td>
         </tr>
 
@@ -212,7 +212,7 @@ function buildReservationEmail(
         <tr>
           <td style="background-color: #111827; padding: 24px 32px; text-align: center;">
             <p style="margin: 0; color: #9CA3AF; font-size: 13px; font-weight: 600;">${fromName}</p>
-            <p style="margin: 4px 0 0; color: #6B7280; font-size: 12px;">Location de v\u00e9hicules \u2014 Marrakech, Maroc</p>
+            <p style="margin: 4px 0 0; color: #6B7280; font-size: 12px;">Transport priv\u00e9 \u2014 Maroc</p>
             <div style="height: 1px; background-color: #374151; margin: 16px auto; max-width: 200px;"></div>
             <p style="margin: 0; color: #6B7280; font-size: 11px;">Cet email est automatique, merci de ne pas y r\u00e9pondre.</p>
           </td>
@@ -242,7 +242,7 @@ serve(async (req: Request) => {
 
     const supabase = createClient(supabaseUrl, supabaseKey);
     const settings = await getSettings(supabase);
-    const fromName = settings.smtp_from_name || 'INVOLOCATION';
+    const fromName = settings.smtp_from_name || 'Move Up Automotive';
     const smtpEmail = settings.smtp_email;
 
     const { type, to, status, data } = await req.json();
@@ -269,9 +269,9 @@ serve(async (req: Request) => {
         <div style="background-color: #F3F4F6; padding: 24px 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;">
           <table align="center" cellpadding="0" cellspacing="0" style="max-width: 480px; width: 100%; margin: 0 auto; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
             <tr>
-              <td style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%); padding: 36px 32px 28px; text-align: center;">
+              <td style="background: linear-gradient(135deg, #75123e 0%, #8d1a4c 100%); padding: 36px 32px 28px; text-align: center;">
                 <h1 style="margin: 0; color: #FFFFFF; font-size: 24px; font-weight: 800; letter-spacing: 1px;">${fromName}</h1>
-                <p style="margin: 6px 0 0; color: rgba(255,255,255,0.8); font-size: 13px; letter-spacing: 0.3px;">Location de v\u00e9hicules \u2022 Marrakech</p>
+                <p style="margin: 6px 0 0; color: rgba(255,255,255,0.8); font-size: 13px; letter-spacing: 0.3px;">Transport priv\u00e9 avec chauffeur \u2022 Maroc</p>
               </td>
             </tr>
             <tr>
@@ -284,7 +284,7 @@ serve(async (req: Request) => {
             <tr>
               <td style="background-color: #111827; padding: 24px 32px; text-align: center;">
                 <p style="margin: 0; color: #9CA3AF; font-size: 12px; font-weight: 600;">${fromName}</p>
-                <p style="margin: 4px 0 0; color: #6B7280; font-size: 11px;">Location de v\u00e9hicules \u2014 Marrakech, Maroc</p>
+                <p style="margin: 4px 0 0; color: #6B7280; font-size: 11px;">Transport priv\u00e9 \u2014 Maroc</p>
               </td>
             </tr>
           </table>

@@ -64,7 +64,7 @@ async function createAdminProfile(userId) {
   console.log('Création du profil admin...');
 
   const { error } = await supabase.from('admin_profiles').upsert(
-    { id: userId, name: 'Admin INVOLOCATION' },
+    { id: userId, name: 'Admin Move Up Automotive' },
     { ignoreDuplicates: false },
   );
 

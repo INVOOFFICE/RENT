@@ -74,7 +74,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3 shrink-0 h-full">
-            <img src={img('/logo.png')} alt="INVOLOCATION" className="h-full w-auto object-contain py-2" />
+            <img src={img('/logo.png')} alt="Move Up Automotive" className="h-full w-auto object-contain py-2" />
           </a>
 
           {/* Desktop Nav Links */}

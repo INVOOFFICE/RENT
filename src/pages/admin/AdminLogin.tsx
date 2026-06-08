@@ -35,7 +35,7 @@ export default function AdminLogin() {
       <div className="w-full max-w-sm bg-white rounded-2xl shadow-card p-8">
         <div className="text-center mb-8">
           <h1 className="font-poppins text-2xl font-bold text-remons-dark">Administration</h1>
-          <p className="text-remons-gray text-sm font-inter mt-1">INVOLOCATION</p>
+          <p className="text-remons-gray text-sm font-inter mt-1">Move Up Automotive</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">

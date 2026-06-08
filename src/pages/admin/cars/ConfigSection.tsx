@@ -16,7 +16,7 @@ export default function ConfigSection() {
   const [smtpPort, setSmtpPort] = useState('587');
   const [smtpEmail, setSmtpEmail] = useState('');
   const [smtpPassword, setSmtpPassword] = useState('');
-  const [smtpFromName, setSmtpFromName] = useState('INVOLOCATION');
+  const [smtpFromName, setSmtpFromName] = useState('Move Up Automotive');
   const [defaultCurrency, setDefaultCurrency] = useState('EUR');
   const { currency } = useCurrency();
   const [franchises, setFranchises] = useState<FranchiseRow[]>(
