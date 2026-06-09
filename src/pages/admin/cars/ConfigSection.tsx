@@ -16,7 +16,7 @@ export default function ConfigSection() {
   const [smtpPort, setSmtpPort] = useState('587');
   const [smtpEmail, setSmtpEmail] = useState('');
   const [smtpPassword, setSmtpPassword] = useState('');
-  const [smtpFromName, setSmtpFromName] = useState('Move Up Automotive');
+  const [smtpFromName, setSmtpFromName] = useState('Yahya Car');
   const [defaultCurrency, setDefaultCurrency] = useState('EUR');
   const { currency } = useCurrency();
   const [franchises, setFranchises] = useState<FranchiseRow[]>(
@@ -42,7 +42,7 @@ export default function ConfigSection() {
         setSmtpPort(get('smtp_port') ?? '587');
         setSmtpEmail(get('smtp_email') ?? '');
         setSmtpPassword(get('smtp_password') ?? '');
-        setSmtpFromName(get('smtp_from_name') ?? 'INVOLOCATION');
+        setSmtpFromName(get('smtp_from_name') ?? 'Yahya Car');
         setDefaultCurrency(get('default_currency') ?? 'EUR');
       }
       if (franchisesRes.data) {

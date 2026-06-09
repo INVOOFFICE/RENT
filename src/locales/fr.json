@@ -1,13 +1,13 @@
 ﻿{
   "common": {
-    "phone": "+212 661 175 193",
-    "email": "contact@moveup-automotive.ma",
-    "address": "Casablanca, Maroc",
+    "phone": "+212 644-045555",
+    "email": "contact@yahyacar.ma",
+    "address": "Bld Fouarat CC N°22, Hay Mohammadi, Casablanca",
     "close": "Fermer"
   },
   "topbar": {
-    "email": "contact@moveup-automotive.ma",
-    "address": "Casablanca, Maroc"
+    "email": "contact@yahyacar.ma",
+    "address": "Bld Fouarat CC N°22, Hay Mohammadi, Casablanca"
   },
   "navbar": {
     "home": "Accueil",
@@ -16,15 +16,15 @@
     "cars": "Nos Services",
     "contact": "Contact",
     "findCar": "Réserver un Transfert",
-    "brand": "MOVE UP",
-    "brandSub": "automotive",
+    "brand": "YAHYA",
+    "brandSub": "car",
     "callUs": "Appelez à tout moment",
     "search": "Rechercher",
     "menu": "Menu"
   },
   "hero": {
-    "subtitle": "MOVE UP AUTOMOTIVE — CASABLANCA",
-    "title": "Service de Chauffeur Privé<br/>et Transport Premium au Maroc",
+    "subtitle": "YAHYA CAR — CASABLANCA",
+    "title": "Location de Voitures<br/>Qualité et Abordabilité au Maroc",
     "pickupLabel": "Lieu de prise en charge",
     "pickupPlaceholder": "Sélectionnez",
     "startDateLabel": "Date de prise en charge",
@@ -43,9 +43,9 @@
     "notSpecifiedF": "Non spécifiée"
   },
   "about": {
-    "subtitle": "MOVE UP AUTOMOTIVE",
-    "title": "L'Excellence du Transport<br/>sur Mesure",
-    "description": "Move Up Automotive est votre partenaire de confiance pour tous vos déplacements au Maroc. Spécialiste du transport premium et du service de chauffeur privé, nous vous offrons une expérience sur mesure alliant confort, ponctualité et professionnalisme. Que ce soit pour un transfert aéroport, un circuit touristique, un déplacement professionnel ou un événement spécial, notre flotte de véhicules haut de gamme et nos chauffeurs expérimentés vous garantissent un service d'exception.",
+    "subtitle": "À PROPOS DE YAHYA CAR",
+    "title": "Où la qualité rencontre<br/>l'abordabilité",
+    "description": "Nous comprenons l'importance d'un voyage fluide et agréable sans le fardeau des coûts excessifs. Yahya Car vous propose des véhicules de qualité à des tarifs compétitifs, pour une valeur maximale sans compromis.",
     "features": {
       "booking": {
         "title": "Chauffeur Professionnel",
@@ -126,21 +126,21 @@
   },
   "features": {
     "express": {
-      "title": "Réservation Simplifiée",
-      "desc": "Réservez votre chauffeur en quelques clics, nous nous occupons du reste."
+      "title": "Services haut de gamme",
+      "desc": "Là où le luxe rencontre un soin exceptionnel, créant des moments inoubliables et dépassant toutes vos attentes."
     },
     "insurance": {
-      "title": "Sécurité & Confiance",
-      "desc": "Véhicules premium, entretien rigoureux et chauffeurs qualifiés pour votre sérénité."
+      "title": "Assistance routière 24h/24",
+      "desc": "Un soutien fiable quand vous en avez le plus besoin, pour rouler en toute confiance et tranquillité d'esprit."
     },
     "support": {
-      "title": "Support 24/7",
-      "desc": "Une équipe dédiée disponible à tout moment pour répondre à vos besoins."
+      "title": "Qualité au meilleur prix",
+      "desc": "Des véhicules de qualité à des tarifs compétitifs, pour une valeur maximale sans compromis."
     }
   },
   "testimonials": {
     "testimonial1": "Service impeccable ! Chauffeur ponctuel, véhicule luxueux et conduite parfaite. Une expérience digne des plus grands standards internationaux.",
-    "testimonial2": "J'ai utilisé Move Up Automotive pour mes déplacements professionnels à Casablanca. Un professionnalisme remarquable, je recommande vivement.",
+    "testimonial2": "J'ai utilisé Yahya Car pour mes déplacements à Casablanca. Un professionnalisme remarquable, je recommande vivement.",
     "testimonial3": "Transfert aéroport organisé sans aucune difficulté. Accueil chaleureux, confort absolu. Mon nouveau réflexe au Maroc.",
     "role": "Client",
     "prev": "Avis précédent",
@@ -161,14 +161,14 @@
     "a4": "Nous couvrons les principales villes du Maroc : Casablanca, Marrakech, Rabat, Tanger, Agadir, Fès et leurs aéroports. Des destinations supplémentaires peuvent être organisées sur demande."
   },
   "footer": {
-    "tagline": "Move Up Automotive — L'Excellence du Transport sur Mesure au Maroc",
-    "copyright": "2026 Move Up Automotive. Tous droits réservés.",
+    "tagline": "Yahya Car — Où la qualité rencontre l'abordabilité",
+    "copyright": "2026 Yahya Car. Tous droits réservés.",
     "terms": "Conditions générales",
     "privacy": "Politique de confidentialité",
     "backToTop": "Retour en haut"
   },
   "pwa": {
-    "installTitle": "Installer Move Up Automotive",
+    "installTitle": "Installer Yahya Car",
     "installDesc": "Ajoutez à votre écran d'accueil",
     "install": "Installer",
     "close": "Fermer"
@@ -179,7 +179,7 @@
   },
   "legal": {
     "terms": {
-      "title": "Conditions générales - MOVE UP AUTOMOTIVE",
+      "title": "Conditions générales - YAHYA CAR",
       "sections": [
         {
           "title": "Limite d'âge, conducteurs et documents",
@@ -187,11 +187,11 @@
         },
         {
           "title": "Procédure de réservation",
-          "content": "Réserver un service de transport avec Move Up Automotive au Maroc vous permet de bénéficier d'un chauffeur privé et de services optionnels tels que la livraison et la restitution à une date et un lieu spécifiés pour une durée convenue.\n\nVous pouvez annuler votre réservation à tout moment jusqu'à 24 heures avant la date de prise en charge prévue en nous informant par e-mail ou WhatsApp."
+          "content": "Réserver un véhicule avec Yahya Car au Maroc vous permet de bénéficier d'une location de qualité et de services optionnels tels que la prise en charge et la restitution à une date et un lieu spécifiés pour une durée convenue.\n\nVous pouvez annuler votre réservation à tout moment jusqu'à 24 heures avant la date de prise en charge prévue en nous informant par e-mail ou WhatsApp."
         },
         {
           "title": "Prise en charge et retour du véhicule",
-          "content": "Move Up Automotive assure la prise en charge et la restitution à l'aéroport, aux hôtels, riads ou à votre résidence dans toutes les villes où nous opérons.\n\nIl est possible d'être pris en charge dans une ville et déposé dans une autre."
+          "content": "Yahya Car assure la prise en charge et la restitution à l'aéroport, aux hôtels ou à votre résidence dans toutes les villes où nous opérons.\n\nIl est possible d'être pris en charge dans une ville et déposé dans une autre."
         },
         {
           "title": "Véhicule",
@@ -203,7 +203,7 @@
         },
         {
           "title": "Comportement inacceptable",
-          "content": "Move Up Automotive peut refuser de vous fournir un service si vous manifestez un comportement discourtois ou inacceptable, comme conduire sous l'influence de l'alcool ou des drogues, ou vous comporter de manière impolie envers un chauffeur ou un représentant de l'agence."
+          "content": "Yahya Car peut refuser de vous fournir un service si vous manifestez un comportement discourtois ou inacceptable, comme conduire sous l'influence de l'alcool ou des drogues, ou vous comporter de manière impolie envers un chauffeur ou un représentant de l'agence."
         },
         {
           "title": "Méthodes de paiement",
@@ -215,7 +215,7 @@
         },
         {
           "title": "Accidents et dommages",
-          "content": "En cas d'accident ou de dommage au véhicule, même s'il n'y a pas de tiers impliqué, vous devez immédiatement notifier la police et Move Up Automotive dans les 48 heures.\n\nPour les dommages mineurs constatés, aucune facturation supplémentaire ne sera appliquée."
+          "content": "En cas d'accident ou de dommage au véhicule, même s'il n'y a pas de tiers impliqué, vous devez immédiatement notifier la police et Yahya Car dans les 48 heures.\n\nPour les dommages mineurs constatés, aucune facturation supplémentaire ne sera appliquée."
         },
         {
           "title": "Assurance",
@@ -224,9 +224,9 @@
       ]
     },
     "privacy": {
-      "title": "Politique de confidentialité - MOVE UP AUTOMOTIVE",
+      "title": "Politique de confidentialité - YAHYA CAR",
       "updated": "Dernière mise à jour le 1er juin 2026",
-      "intro": "Cet avis de confidentialité pour MOVE UP AUTOMOTIVE ('nous', 'notre' ou 'nos') décrit comment et pourquoi nous pourrions collecter, stocker, utiliser et/ou partager vos informations lorsque vous utilisez nos services, par exemple lorsque vous visitez notre site web à https://moveup-automotive.ma ou tout autre site web de notre société qui renvoie à cet avis de confidentialité.",
+      "intro": "Cet avis de confidentialité pour YAHYA CAR ('nous', 'notre' ou 'nos') décrit comment et pourquoi nous pourrions collecter, stocker, utiliser et/ou partager vos informations lorsque vous utilisez nos services, par exemple lorsque vous visitez notre site web à https://yahyacar.ma ou tout autre site web de notre société qui renvoie à cet avis de confidentialité.",
       "sections": [
         {
           "title": "Résumé des points clés",
@@ -266,7 +266,7 @@
         },
         {
           "title": "9. Comment pouvez-vous nous contacter au sujet de cet avis ?",
-          "content": "Si vous avez des questions ou des commentaires sur le présent avis, vous pouvez nous contacter par courrier à l'adresse suivante : MOVE UP AUTOMOTIVE, Casablanca, Maroc — contact@moveup-automotive.ma"
+          "content": "Si vous avez des questions ou des commentaires sur le présent avis, vous pouvez nous contacter par courrier à l'adresse suivante : YAHYA CAR, Bld Fouarat CC N°22, Hay Mohammadi, Casablanca, Maroc — contact@yahyacar.ma"
         }
       ]
     }

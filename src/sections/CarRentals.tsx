@@ -109,7 +109,7 @@ function buildTransportMap(data: TransportPrice[]): Record<string, number> {
   return map;
 }
 
-const PHONE = '212661175193';
+const PHONE = '212644045555';
 
   function BookingModal({
   car, tariffs, transportPrices, locations, seasonStart, seasonEnd, driverSettings,
@@ -137,6 +137,7 @@ const PHONE = '212661175193';
     deliveryLocation: '',
   });
   const [submitMessage, setSubmitMessage] = useState<string | null>(null);
+  const [submitted, setSubmitted] = useState(false);
   const [chauffeurEnabled, setChauffeurEnabled] = useState(false);
   const [chauffeurType, setChauffeurType] = useState<'hourly' | 'half_day' | 'full_day' | '24h'>('hourly');
 
@@ -219,8 +220,8 @@ const PHONE = '212661175193';
       });
 
       if (error) throw new Error(error.message);
-      setSubmitMessage(t('cars.successMessage'));
-      sendReservationEmail('ysonouari@gmail.com', 'new', {
+      setSubmitted(true);
+      sendReservationEmail('contact@yahyacar.ma', 'new', {
         client_name: form.name,
         client_email: form.email,
         client_phone: form.phone,
@@ -237,6 +238,32 @@ const PHONE = '212661175193';
   };
 
   const today = new Date().toISOString().split('T')[0];
+
+  if (submitted) {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
+        <div className="relative w-full max-w-md bg-white rounded-3xl p-10 shadow-elevated text-center">
+          <div className="w-16 h-16 rounded-full bg-[#2ecc71]/10 flex items-center justify-center mx-auto mb-6">
+            <svg className="w-8 h-8 text-[#2ecc71]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          </div>
+          <h3 className="font-poppins text-xl font-bold text-remons-dark mb-4">
+            Réservation confirmée
+          </h3>
+          <p className="text-remons-gray text-sm font-inter leading-relaxed mb-6">
+            Votre demande de réservation a bien été enregistrée. Notre équipe va la vérifier et vous contacter dans les plus brefs délais pour confirmer votre réservation. Merci de votre confiance et à bientôt chez Yahya Car.
+          </p>
+          <button
+            onClick={onClose}
+            className="btn-primary font-poppins text-sm px-8 py-3"
+          >
+            Fermer
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/60 p-4 overflow-y-auto">

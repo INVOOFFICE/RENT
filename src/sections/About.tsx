@@ -37,10 +37,10 @@ export default function About() {
             {/* Subtitle */}
             <div className="flex items-center gap-3 mb-4 animate-item">
               <svg width="32" height="16" viewBox="0 0 32 16" fill="none">
-                <path d="M2 12c0-4 3-7 7-7h5c3 0 5 1.5 6 4" stroke="#75123e" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                <circle cx="8" cy="12" r="3" stroke="#75123e" strokeWidth="1.5" fill="none"/>
-                <circle cx="24" cy="12" r="3" stroke="#75123e" strokeWidth="1.5" fill="none"/>
-                <path d="M6 10l-2-5" stroke="#75123e" strokeWidth="1.5" fill="none"/>
+                <path d="M2 12c0-4 3-7 7-7h5c3 0 5 1.5 6 4" stroke="#2ecc71" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                <circle cx="8" cy="12" r="3" stroke="#2ecc71" strokeWidth="1.5" fill="none"/>
+                <circle cx="24" cy="12" r="3" stroke="#2ecc71" strokeWidth="1.5" fill="none"/>
+                <path d="M6 10l-2-5" stroke="#2ecc71" strokeWidth="1.5" fill="none"/>
               </svg>
               <span className="text-remons-primary text-[13px] font-inter font-medium uppercase tracking-wider">
                 {t('about.subtitle')}
@@ -73,10 +73,10 @@ export default function About() {
             <div className="animate-item mt-10">
               <div className="flex items-center gap-3 mb-4">
                 <svg width="32" height="16" viewBox="0 0 32 16" fill="none">
-                  <path d="M2 12c0-4 3-7 7-7h5c3 0 5 1.5 6 4" stroke="#75123e" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                  <circle cx="8" cy="12" r="3" stroke="#75123e" strokeWidth="1.5" fill="none"/>
-                  <circle cx="24" cy="12" r="3" stroke="#75123e" strokeWidth="1.5" fill="none"/>
-                  <path d="M6 10l-2-5" stroke="#75123e" strokeWidth="1.5" fill="none"/>
+                  <path d="M2 12c0-4 3-7 7-7h5c3 0 5 1.5 6 4" stroke="#2ecc71" strokeWidth="2" fill="none" strokeLinecap="round"/>
+                  <circle cx="8" cy="12" r="3" stroke="#2ecc71" strokeWidth="1.5" fill="none"/>
+                  <circle cx="24" cy="12" r="3" stroke="#2ecc71" strokeWidth="1.5" fill="none"/>
+                  <path d="M6 10l-2-5" stroke="#2ecc71" strokeWidth="1.5" fill="none"/>
                 </svg>
                 <span className="text-remons-primary text-[13px] font-inter font-medium uppercase tracking-wider">
                   NOS ATOUTS
@@ -95,12 +95,12 @@ export default function About() {
               <div className="flex flex-wrap items-center gap-3">
                 <span className="text-remons-gray font-inter text-sm">WhatsApp :</span>
                 <a
-                  href="https://wa.me/212661175193"
+                  href="https://wa.me/212644045555"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-remons-primary text-white text-sm font-medium px-4 py-2 rounded-xl hover:bg-remons-primary-dark transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg shadow-button"
                 >
-                  +212 661 175 193
+                  +212 644-045555
                 </a>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function About() {
               playsInline
               className="w-full h-full object-cover rounded-2xl relative z-10"
             >
-              <source src={img('/vid2.mp4')} type="video/mp4" />
+              <source src={img('/Vid.mp4')} type="video/mp4" />
             </video>
           </div>
         </div>

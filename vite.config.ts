@@ -7,13 +7,13 @@ import { VitePWA } from 'vite-plugin-pwa'
 import type { ManifestOptions } from 'vite-plugin-pwa'
 
 const manifest: Partial<ManifestOptions> = {
-  name: "Move Up Automotive — Transport privé & Chauffeur",
-  short_name: "Move Up Auto",
-  description: "Move Up Automotive — Transport privé avec chauffeur de luxe au Maroc : Casablanca, Marrakech, Rabat.",
+  name: "Yahya Car — Location de voitures",
+  short_name: "Yahya Car",
+  description: "Yahya Car — Location de voitures au Maroc : Casablanca, Marrakech, Rabat. Qualité et abordabilité.",
   start_url: "/",
   display: "standalone",
   background_color: "#ffffff",
-  theme_color: "#75123e",
+  theme_color: "#2ecc71",
   lang: "fr",
   icons: [
     {

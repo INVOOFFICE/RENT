@@ -76,7 +76,7 @@ function buildReservationEmail(
   };
 
   const label = statusLabels[status] || status;
-  const statusColor = statusColors[status] || '#75123e';
+  const statusColor = statusColors[status] || '#2ecc71';
   const statusIcon = statusIcons[status] || '';
 
   const isNew = status === 'new';
@@ -129,7 +129,7 @@ function buildReservationEmail(
         <table cellpadding="0" cellspacing="0" style="width: 100%;">
           <tr>
             <td style="font-size: 14px; color: #111827; font-weight: 600;">Total</td>
-            <td style="text-align: right; font-size: 18px; font-weight: 700; color: #75123e;">${data.total_eur.toFixed(2)} \u20ac</td>
+            <td style="text-align: right; font-size: 18px; font-weight: 700; color: #2ecc71;">${data.total_eur.toFixed(2)} \u20ac</td>
           </tr>
         </table>
       </td>
@@ -144,7 +144,7 @@ function buildReservationEmail(
   if (data.client_email) clientRows.push(`
     <tr>
       <td style="padding: 4px 0; color: #374151; font-size: 13px;"><strong>Email :</strong></td>
-      <td style="padding: 4px 0 4px 12px; color: #111827; font-size: 13px;"><a href="mailto:${data.client_email}" style="color: #75123e; text-decoration: none;">${data.client_email}</a></td>
+      <td style="padding: 4px 0 4px 12px; color: #111827; font-size: 13px;"><a href="mailto:${data.client_email}" style="color: #2ecc71; text-decoration: none;">${data.client_email}</a></td>
     </tr>`);
   if (data.client_phone) clientRows.push(`
     <tr>
@@ -157,9 +157,9 @@ function buildReservationEmail(
       <table align="center" cellpadding="0" cellspacing="0" style="max-width: 560px; width: 100%; margin: 0 auto; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
         <!-- Header -->
         <tr>
-            <td style="background: linear-gradient(135deg, #75123e 0%, #8d1a4c 100%); padding: 36px 32px 28px; text-align: center;">
+            <td style="background: linear-gradient(135deg, #2ecc71 0%, #54DA8D 100%); padding: 36px 32px 28px; text-align: center;">
             <h1 style="margin: 0; color: #FFFFFF; font-size: 24px; font-weight: 800; letter-spacing: 1px;">${fromName}</h1>
-            <p style="margin: 6px 0 0; color: rgba(255,255,255,0.8); font-size: 13px; letter-spacing: 0.3px;">Transport priv\u00e9 avec chauffeur \u2022 Maroc</p>
+            <p style="margin: 6px 0 0; color: rgba(255,255,255,0.8); font-size: 13px; letter-spacing: 0.3px;">Location de voitures \u2022 Maroc</p>
           </td>
         </tr>
 
@@ -242,7 +242,7 @@ serve(async (req: Request) => {
 
     const supabase = createClient(supabaseUrl, supabaseKey);
     const settings = await getSettings(supabase);
-    const fromName = settings.smtp_from_name || 'Move Up Automotive';
+    const fromName = settings.smtp_from_name || 'Yahya Car';
     const smtpEmail = settings.smtp_email;
 
     const { type, to, status, data } = await req.json();
@@ -269,9 +269,9 @@ serve(async (req: Request) => {
         <div style="background-color: #F3F4F6; padding: 24px 16px; font-family: 'Segoe UI', Helvetica, Arial, sans-serif;">
           <table align="center" cellpadding="0" cellspacing="0" style="max-width: 480px; width: 100%; margin: 0 auto; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
             <tr>
-              <td style="background: linear-gradient(135deg, #75123e 0%, #8d1a4c 100%); padding: 36px 32px 28px; text-align: center;">
+              <td style="background: linear-gradient(135deg, #2ecc71 0%, #54DA8D 100%); padding: 36px 32px 28px; text-align: center;">
                 <h1 style="margin: 0; color: #FFFFFF; font-size: 24px; font-weight: 800; letter-spacing: 1px;">${fromName}</h1>
-                <p style="margin: 6px 0 0; color: rgba(255,255,255,0.8); font-size: 13px; letter-spacing: 0.3px;">Transport priv\u00e9 avec chauffeur \u2022 Maroc</p>
+                <p style="margin: 6px 0 0; color: rgba(255,255,255,0.8); font-size: 13px; letter-spacing: 0.3px;">Location de voitures \u2022 Maroc</p>
               </td>
             </tr>
             <tr>

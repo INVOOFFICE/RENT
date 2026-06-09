@@ -34,7 +34,7 @@ const supabase = createClient(SUPABASE_URL, SERVICE_ROLE_KEY, {
 
 // ─── Admin user ────────────────────────────────────────────
 
-const ADMIN_EMAIL = 'ysonouari@gmail.com';
+const ADMIN_EMAIL = 'contact@yahyacar.ma';
 const ADMIN_PASSWORD = '066790249';
 
 async function createAdmin() {
@@ -64,7 +64,7 @@ async function createAdminProfile(userId) {
   console.log('Création du profil admin...');
 
   const { error } = await supabase.from('admin_profiles').upsert(
-    { id: userId, name: 'Admin Move Up Automotive' },
+    { id: userId, name: 'Admin Yahya Car' },
     { ignoreDuplicates: false },
   );
 

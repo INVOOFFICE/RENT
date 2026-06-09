@@ -12,7 +12,7 @@ module.exports = {
         remons: {
           primary: 'rgb(var(--primary-rgb) / <alpha-value>)',
           'primary-light': 'rgb(var(--primary-light-rgb) / <alpha-value>)',
-          'primary-dark': '#5c0e31',
+          'primary-dark': '#23A35A',
           secondary: '#0F172A',
           dark: 'var(--dark)',
           gray: 'var(--gray)',
@@ -87,8 +87,8 @@ module.exports = {
         xs: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
         card: "0 4px 20px rgba(0,0,0,0.08)",
         elevated: "0 18px 45px rgba(15, 28, 46, 0.14)",
-        button: "0 10px 25px rgba(117,18,62,0.35)",
-        premium: "0 18px 45px rgba(117,18,62,0.24)",
+        button: "0 10px 25px rgba(46,204,113,0.35)",
+        premium: "0 18px 45px rgba(46,204,113,0.24)",
       },
       keyframes: {
         "accordion-down": {
